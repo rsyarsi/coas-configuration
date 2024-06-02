@@ -4,8 +4,8 @@
         {
             "name": "codebase",
             "instances": "max",
-            "exec_mode": "fork",
-            "script": "node index.js",
+            "exec_mode": "cluster",
+            "script": "./.output/server/index.mjs",
             "out_file": "/dev/stdout",
             "error_file": "/dev/stderr",
             "autorestart": true,

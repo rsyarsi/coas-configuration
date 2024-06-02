@@ -123,6 +123,7 @@ services:
     volumes:
 
       # - /etc/letsencrypt/archive/frontend.test/:/etc/letsencrypt/live/frontend.test/ #
+      - /etc/letsencrypt/archive/sikm.rsyarsi.co.id/:/etc/letsencrypt/live/sikm.rsyarsi.co.id/
       - ./storage/server/frontend.conf:/etc/nginx/templates/default.conf.template
       - codebase_frontend:/var/www/${COMPOSE_PROJECT_NAME}/
 
@@ -150,6 +151,7 @@ services:
     volumes:
 
       # - /etc/letsencrypt/archive/backend.test/:/etc/letsencrypt/live/backend.test/ #
+      - /etc/letsencrypt/archive/apisikmfkg.rsyarsi.co.id/:/etc/letsencrypt/live/apisikmfkg.rsyarsi.co.id/
       - ./storage/server/backend.conf:/etc/nginx/templates/default.conf.template
       - codebase_backend:/var/www/${COMPOSE_PROJECT_NAME}/
 

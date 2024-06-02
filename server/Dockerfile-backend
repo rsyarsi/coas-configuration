@@ -1,6 +1,6 @@
 FROM tripteki/codebase_backend_kit:latest as codebase
 
     COPY ./codebase/backend .
-    # RUN chgrp -R www-data bootstrap/cache storage && chmod -R ug+rwx bootstrap/cache storage #
+    RUN chgrp -R www-data bootstrap/cache storage && chmod -R ug+rwx bootstrap/cache storage
     RUN if [ -e package.json ]; then npm install --legacy-peer-deps; fi;
     RUN if [ -e composer.json ]; then composer install; fi;

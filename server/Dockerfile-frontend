@@ -1,4 +1,6 @@
 FROM tripteki/codebase_frontend_kit:latest as codebase
 
+    ENV NODE_OPTIONS="--max-old-space-size=8192"
+
     COPY ./codebase/frontend .
-    RUN if [ -e package.json ]; then npm install --legacy-peer-deps; fi;
+    RUN if [ -e package.json ]; then npm install --dev && npm run build; fi;

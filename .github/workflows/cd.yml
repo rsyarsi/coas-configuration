@@ -1,0 +1,39 @@
+name: Continuous Delivery and Continuous Deployment Server
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+    cd:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: tripteki/cd-server@1.0.0
+              env:
+                GITHUB_TOKEN: ${{ secrets.TOKEN }}
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+                artifact: pyproject.toml
+                type: command
+                host: ${{ secrets.SERVER_HOST }}
+                port: ${{ secrets.SERVER_PORT }}
+                user: ${{ secrets.SERVER_USER }}
+                privatekey: ${{ secrets.SERVER_PRIVATE_KEY }}
+                privatekey_passphrase: ${{ secrets.SERVER_PRIVATE_KEY_PASSPHRASE }}
+                script: |
+                  cd /var/www/sikm/server/ && git remote set-url origin https://${GITHUB_TOKEN}@github.com/rsyarsi/coas-configuration.git && git pull origin master && cp .env.example .env && \
+                  docker-compose stop codebase_frontend && \
+                  docker-compose stop codebase_backend && \
+                  docker container rm -f codebase_frontend && \
+                  docker container rm -f codebase_backend && \
+                  docker image rm -f codebase_frontend && \
+                  docker image rm -f codebase_backend && \
+                  echo "Cleaned.";
+                  docker volume prune -a -f;
+                  cd /var/www/sikm/server/codebase/ && \
+                  cd frontend && git remote set-url origin https://${GITHUB_TOKEN}@github.com/rsyarsi/coas-frontend.git frontend && git pull && \
+                  cd backend && git remote set-url origin https://${GITHUB_TOKEN}@github.com/rsyarsi/coas-backend.git backend && git pull && \
+                  cd /var/www/sikm/server/ && \
+                  docker-compose build --no-cache codebase_frontend codebase_backend && docker-compose up -d && \
+                  echo "Done.";
