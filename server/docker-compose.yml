@@ -28,10 +28,10 @@ services:
 
         #USER: ${USERID}
         #GROUP: ${GROUPID}
-        #APP_TIMEZONE: ${TZ}
+        #TZ: ${TZ}
 
-        #APP_NAME: ${COMPOSE_PROJECT_NAME}
-        #APP_ENV: ${COMPOSE_PROJECT_ENV}
+        #NODE_NAME: ${COMPOSE_PROJECT_NAME}
+        #NODE_ENV: ${COMPOSE_PROJECT_ENV}
 
     #image: "codebase_frontend_kit:latest"
     #entrypoint: []
@@ -47,10 +47,10 @@ services:
 
         #USER: ${USERID}
         #GROUP: ${GROUPID}
-        #TZ: ${TZ}
+        #APP_TIMEZONE: ${TZ}
 
-        #NODE_NAME: ${COMPOSE_PROJECT_NAME}
-        #NODE_ENV: ${COMPOSE_PROJECT_ENV}
+        #APP_NAME: ${COMPOSE_PROJECT_NAME}
+        #APP_ENV: ${COMPOSE_PROJECT_ENV}
 
     #image: "codebase_backend_kit:latest"
     #entrypoint: []
