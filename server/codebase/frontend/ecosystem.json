@@ -4,7 +4,7 @@
         {
             "name": "codebase",
             "instances": "max",
-            "exec_mode": "cluster",
+            "exec_mode": "fork",
             "script": "./.output/server/index.mjs",
             "out_file": "/dev/stdout",
             "error_file": "/dev/stderr",
