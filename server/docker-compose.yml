@@ -35,7 +35,7 @@ services:
 
     #image: "codebase_frontend_kit:latest"
     #entrypoint: []
-    #command: ["tail", "-f", "/dev/null"]
+    #command: ["tail", "/dev/null"]
 
   #codebase_backend_kit:
 
@@ -54,7 +54,7 @@ services:
 
     #image: "codebase_backend_kit:latest"
     #entrypoint: []
-    #command: ["tail", "-f", "/dev/null"]
+    #command: ["tail", "/dev/null"]
 
   codebase_frontend:
 
@@ -80,9 +80,12 @@ services:
 
       - 9000
 
-    links:
+    #depends_on:
 
       #- codebase_frontend_kit
+
+    links:
+
       - codebase_backend
 
   codebase_backend:
@@ -109,9 +112,12 @@ services:
 
       - 9000
 
-    links:
+    #depends_on:
 
       #- codebase_backend_kit
+
+    links:
+
       - memory
       - database_postgresql
       - mail
