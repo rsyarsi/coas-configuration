@@ -3,7 +3,7 @@
 
         {
             "name": "codebase",
-            "instances": "max",
+            "instances": "1",
             "exec_mode": "fork",
             "script": "./.output/server/index.mjs",
             "out_file": "/dev/stdout",
