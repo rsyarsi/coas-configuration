@@ -5,7 +5,7 @@
 -- Dumped from database version 14.11 (Debian 14.11-1.pgdg120+2)
 -- Dumped by pg_dump version 14.12
 
--- Started on 2024-06-02 15:28:24 WIB
+-- Started on 2024-06-21 13:06:00 WIB
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -27,7 +27,7 @@ CREATE EXTENSION IF NOT EXISTS tablefunc WITH SCHEMA public;
 
 
 --
--- TOC entry 3755 (class 0 OID 0)
+-- TOC entry 3757 (class 0 OID 0)
 -- Dependencies: 2
 -- Name: EXTENSION tablefunc; Type: COMMENT; Schema: -; Owner: 
 --
@@ -44,7 +44,7 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA public;
 
 
 --
--- TOC entry 3756 (class 0 OID 0)
+-- TOC entry 3758 (class 0 OID 0)
 -- Dependencies: 3
 -- Name: EXTENSION "uuid-ossp"; Type: COMMENT; Schema: -; Owner: 
 --
@@ -53,7 +53,7 @@ COMMENT ON EXTENSION "uuid-ossp" IS 'generate universally unique identifiers (UU
 
 
 --
--- TOC entry 296 (class 1255 OID 16417)
+-- TOC entry 298 (class 1255 OID 16417)
 -- Name: generatefinal_konservasi(uuid, uuid, uuid); Type: PROCEDURE; Schema: public; Owner: rsyarsi
 --
 
@@ -169,7 +169,7 @@ END;$$;
 ALTER PROCEDURE public.generatefinal_konservasi(IN studentid uuid, IN semesterid uuid, IN yearid uuid) OWNER TO rsyarsi;
 
 --
--- TOC entry 297 (class 1255 OID 16418)
+-- TOC entry 299 (class 1255 OID 16418)
 -- Name: generatefinal_orthodonti(uuid, uuid, uuid); Type: PROCEDURE; Schema: public; Owner: rsyarsi
 --
 
@@ -329,7 +329,7 @@ end;$$;
 ALTER PROCEDURE public.generatefinal_orthodonti(IN studentid uuid, IN semesterid uuid, IN yearid uuid) OWNER TO rsyarsi;
 
 --
--- TOC entry 306 (class 1255 OID 16420)
+-- TOC entry 308 (class 1255 OID 16420)
 -- Name: generatefinal_periodonties(uuid, uuid, uuid); Type: PROCEDURE; Schema: public; Owner: rsyarsi
 --
 
@@ -433,7 +433,7 @@ $$;
 ALTER PROCEDURE public.generatefinal_periodonties(IN studentid uuid, IN semesterid uuid, IN yearid uuid) OWNER TO rsyarsi;
 
 --
--- TOC entry 307 (class 1255 OID 16421)
+-- TOC entry 309 (class 1255 OID 16421)
 -- Name: generatefinal_prostodonti(uuid, uuid, uuid); Type: PROCEDURE; Schema: public; Owner: rsyarsi
 --
 
@@ -517,7 +517,7 @@ end;$$;
 ALTER PROCEDURE public.generatefinal_prostodonti(IN studentid uuid, IN semesterid uuid, IN yearid uuid) OWNER TO rsyarsi;
 
 --
--- TOC entry 308 (class 1255 OID 16422)
+-- TOC entry 310 (class 1255 OID 16422)
 -- Name: generatefinal_radiologi(uuid, uuid, uuid); Type: PROCEDURE; Schema: public; Owner: rsyarsi
 --
 
@@ -646,7 +646,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 214 (class 1259 OID 16423)
+-- TOC entry 216 (class 1259 OID 16423)
 -- Name: absencestudents; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -666,7 +666,7 @@ CREATE TABLE public.absencestudents (
 ALTER TABLE public.absencestudents OWNER TO rsyarsi;
 
 --
--- TOC entry 215 (class 1259 OID 16426)
+-- TOC entry 217 (class 1259 OID 16426)
 -- Name: assesmentdetails; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -696,7 +696,7 @@ CREATE TABLE public.assesmentdetails (
 ALTER TABLE public.assesmentdetails OWNER TO rsyarsi;
 
 --
--- TOC entry 216 (class 1259 OID 16433)
+-- TOC entry 218 (class 1259 OID 16433)
 -- Name: assesmentgroupfinals; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -714,7 +714,7 @@ CREATE TABLE public.assesmentgroupfinals (
 ALTER TABLE public.assesmentgroupfinals OWNER TO rsyarsi;
 
 --
--- TOC entry 217 (class 1259 OID 16438)
+-- TOC entry 219 (class 1259 OID 16438)
 -- Name: assesmentgroups; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -736,7 +736,7 @@ CREATE TABLE public.assesmentgroups (
 ALTER TABLE public.assesmentgroups OWNER TO rsyarsi;
 
 --
--- TOC entry 218 (class 1259 OID 16444)
+-- TOC entry 220 (class 1259 OID 16444)
 -- Name: emrkonservasi_jobs; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -761,7 +761,7 @@ CREATE TABLE public.emrkonservasi_jobs (
 ALTER TABLE public.emrkonservasi_jobs OWNER TO rsyarsi;
 
 --
--- TOC entry 219 (class 1259 OID 16450)
+-- TOC entry 221 (class 1259 OID 16450)
 -- Name: emrkonservasis; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -1074,8 +1074,8 @@ CREATE TABLE public.emrkonservasis (
 ALTER TABLE public.emrkonservasis OWNER TO rsyarsi;
 
 --
--- TOC entry 3757 (class 0 OID 0)
--- Dependencies: 219
+-- TOC entry 3759 (class 0 OID 0)
+-- Dependencies: 221
 -- Name: COLUMN emrkonservasis.status_emr; Type: COMMENT; Schema: public; Owner: rsyarsi
 --
 
@@ -1083,8 +1083,8 @@ COMMENT ON COLUMN public.emrkonservasis.status_emr IS '[ OPEN, WRITE, FINISH ]';
 
 
 --
--- TOC entry 3758 (class 0 OID 0)
--- Dependencies: 219
+-- TOC entry 3760 (class 0 OID 0)
+-- Dependencies: 221
 -- Name: COLUMN emrkonservasis.status_penilaian; Type: COMMENT; Schema: public; Owner: rsyarsi
 --
 
@@ -1092,7 +1092,7 @@ COMMENT ON COLUMN public.emrkonservasis.status_penilaian IS '[ OPEN, WRITE, FINI
 
 
 --
--- TOC entry 220 (class 1259 OID 16455)
+-- TOC entry 222 (class 1259 OID 16455)
 -- Name: emrortodonsies; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -1353,8 +1353,8 @@ CREATE TABLE public.emrortodonsies (
 ALTER TABLE public.emrortodonsies OWNER TO rsyarsi;
 
 --
--- TOC entry 3759 (class 0 OID 0)
--- Dependencies: 220
+-- TOC entry 3761 (class 0 OID 0)
+-- Dependencies: 222
 -- Name: COLUMN emrortodonsies.status_emr; Type: COMMENT; Schema: public; Owner: rsyarsi
 --
 
@@ -1362,8 +1362,8 @@ COMMENT ON COLUMN public.emrortodonsies.status_emr IS '[ OPEN, WRITE, FINISH ]';
 
 
 --
--- TOC entry 3760 (class 0 OID 0)
--- Dependencies: 220
+-- TOC entry 3762 (class 0 OID 0)
+-- Dependencies: 222
 -- Name: COLUMN emrortodonsies.status_penilaian; Type: COMMENT; Schema: public; Owner: rsyarsi
 --
 
@@ -1371,7 +1371,7 @@ COMMENT ON COLUMN public.emrortodonsies.status_penilaian IS '[ OPEN, WRITE, FINI
 
 
 --
--- TOC entry 221 (class 1259 OID 16460)
+-- TOC entry 223 (class 1259 OID 16460)
 -- Name: emrpedodontie_behaviorratings; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -1390,7 +1390,7 @@ CREATE TABLE public.emrpedodontie_behaviorratings (
 ALTER TABLE public.emrpedodontie_behaviorratings OWNER TO rsyarsi;
 
 --
--- TOC entry 222 (class 1259 OID 16465)
+-- TOC entry 224 (class 1259 OID 16465)
 -- Name: emrpedodontie_treatmenplans; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -1411,7 +1411,7 @@ CREATE TABLE public.emrpedodontie_treatmenplans (
 ALTER TABLE public.emrpedodontie_treatmenplans OWNER TO rsyarsi;
 
 --
--- TOC entry 223 (class 1259 OID 16470)
+-- TOC entry 225 (class 1259 OID 16470)
 -- Name: emrpedodontie_treatmens; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -1433,7 +1433,7 @@ CREATE TABLE public.emrpedodontie_treatmens (
 ALTER TABLE public.emrpedodontie_treatmens OWNER TO rsyarsi;
 
 --
--- TOC entry 224 (class 1259 OID 16475)
+-- TOC entry 226 (class 1259 OID 16475)
 -- Name: emrpedodonties; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -1582,8 +1582,8 @@ CREATE TABLE public.emrpedodonties (
 ALTER TABLE public.emrpedodonties OWNER TO rsyarsi;
 
 --
--- TOC entry 3761 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3763 (class 0 OID 0)
+-- Dependencies: 226
 -- Name: COLUMN emrpedodonties.status_emr; Type: COMMENT; Schema: public; Owner: rsyarsi
 --
 
@@ -1591,8 +1591,8 @@ COMMENT ON COLUMN public.emrpedodonties.status_emr IS '[ OPEN, WRITE, FINISH ]';
 
 
 --
--- TOC entry 3762 (class 0 OID 0)
--- Dependencies: 224
+-- TOC entry 3764 (class 0 OID 0)
+-- Dependencies: 226
 -- Name: COLUMN emrpedodonties.status_penilaian; Type: COMMENT; Schema: public; Owner: rsyarsi
 --
 
@@ -1600,7 +1600,7 @@ COMMENT ON COLUMN public.emrpedodonties.status_penilaian IS '[ OPEN, WRITE, FINI
 
 
 --
--- TOC entry 225 (class 1259 OID 16480)
+-- TOC entry 227 (class 1259 OID 16480)
 -- Name: emrperiodontie_soaps; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -1626,7 +1626,7 @@ CREATE TABLE public.emrperiodontie_soaps (
 ALTER TABLE public.emrperiodontie_soaps OWNER TO rsyarsi;
 
 --
--- TOC entry 226 (class 1259 OID 16486)
+-- TOC entry 228 (class 1259 OID 16486)
 -- Name: emrperiodonties; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -2570,8 +2570,8 @@ CREATE TABLE public.emrperiodonties (
 ALTER TABLE public.emrperiodonties OWNER TO rsyarsi;
 
 --
--- TOC entry 3763 (class 0 OID 0)
--- Dependencies: 226
+-- TOC entry 3765 (class 0 OID 0)
+-- Dependencies: 228
 -- Name: COLUMN emrperiodonties.status_emr; Type: COMMENT; Schema: public; Owner: rsyarsi
 --
 
@@ -2579,8 +2579,8 @@ COMMENT ON COLUMN public.emrperiodonties.status_emr IS '[ OPEN, WRITE, FINISH ]'
 
 
 --
--- TOC entry 3764 (class 0 OID 0)
--- Dependencies: 226
+-- TOC entry 3766 (class 0 OID 0)
+-- Dependencies: 228
 -- Name: COLUMN emrperiodonties.status_penilaian; Type: COMMENT; Schema: public; Owner: rsyarsi
 --
 
@@ -2588,7 +2588,7 @@ COMMENT ON COLUMN public.emrperiodonties.status_penilaian IS '[ OPEN, WRITE, FIN
 
 
 --
--- TOC entry 227 (class 1259 OID 16491)
+-- TOC entry 229 (class 1259 OID 16491)
 -- Name: emrprostodontie_logbooks; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -2610,7 +2610,7 @@ CREATE TABLE public.emrprostodontie_logbooks (
 ALTER TABLE public.emrprostodontie_logbooks OWNER TO rsyarsi;
 
 --
--- TOC entry 228 (class 1259 OID 16496)
+-- TOC entry 230 (class 1259 OID 16496)
 -- Name: emrprostodonties; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -2824,8 +2824,8 @@ CREATE TABLE public.emrprostodonties (
 ALTER TABLE public.emrprostodonties OWNER TO rsyarsi;
 
 --
--- TOC entry 3765 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3767 (class 0 OID 0)
+-- Dependencies: 230
 -- Name: COLUMN emrprostodonties.status_emr; Type: COMMENT; Schema: public; Owner: rsyarsi
 --
 
@@ -2833,8 +2833,8 @@ COMMENT ON COLUMN public.emrprostodonties.status_emr IS '[ OPEN, WRITE, FINISH ]
 
 
 --
--- TOC entry 3766 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 3768 (class 0 OID 0)
+-- Dependencies: 230
 -- Name: COLUMN emrprostodonties.status_penilaian; Type: COMMENT; Schema: public; Owner: rsyarsi
 --
 
@@ -2842,7 +2842,7 @@ COMMENT ON COLUMN public.emrprostodonties.status_penilaian IS '[ OPEN, WRITE, FI
 
 
 --
--- TOC entry 229 (class 1259 OID 16501)
+-- TOC entry 231 (class 1259 OID 16501)
 -- Name: emrradiologies; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -2892,8 +2892,8 @@ CREATE TABLE public.emrradiologies (
 ALTER TABLE public.emrradiologies OWNER TO rsyarsi;
 
 --
--- TOC entry 3767 (class 0 OID 0)
--- Dependencies: 229
+-- TOC entry 3769 (class 0 OID 0)
+-- Dependencies: 231
 -- Name: COLUMN emrradiologies.status_emr; Type: COMMENT; Schema: public; Owner: rsyarsi
 --
 
@@ -2901,8 +2901,8 @@ COMMENT ON COLUMN public.emrradiologies.status_emr IS '[ OPEN, WRITE, FINISH ]';
 
 
 --
--- TOC entry 3768 (class 0 OID 0)
--- Dependencies: 229
+-- TOC entry 3770 (class 0 OID 0)
+-- Dependencies: 231
 -- Name: COLUMN emrradiologies.status_penilaian; Type: COMMENT; Schema: public; Owner: rsyarsi
 --
 
@@ -2910,7 +2910,7 @@ COMMENT ON COLUMN public.emrradiologies.status_penilaian IS '[ OPEN, WRITE, FINI
 
 
 --
--- TOC entry 230 (class 1259 OID 16506)
+-- TOC entry 232 (class 1259 OID 16506)
 -- Name: failed_jobs; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -2928,7 +2928,7 @@ CREATE TABLE public.failed_jobs (
 ALTER TABLE public.failed_jobs OWNER TO rsyarsi;
 
 --
--- TOC entry 231 (class 1259 OID 16512)
+-- TOC entry 233 (class 1259 OID 16512)
 -- Name: failed_jobs_id_seq; Type: SEQUENCE; Schema: public; Owner: rsyarsi
 --
 
@@ -2943,8 +2943,8 @@ CREATE SEQUENCE public.failed_jobs_id_seq
 ALTER TABLE public.failed_jobs_id_seq OWNER TO rsyarsi;
 
 --
--- TOC entry 3769 (class 0 OID 0)
--- Dependencies: 231
+-- TOC entry 3771 (class 0 OID 0)
+-- Dependencies: 233
 -- Name: failed_jobs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: rsyarsi
 --
 
@@ -2952,7 +2952,7 @@ ALTER SEQUENCE public.failed_jobs_id_seq OWNED BY public.failed_jobs.id;
 
 
 --
--- TOC entry 232 (class 1259 OID 16513)
+-- TOC entry 234 (class 1259 OID 16513)
 -- Name: finalassesment_konservasis; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -2978,7 +2978,7 @@ CREATE TABLE public.finalassesment_konservasis (
 ALTER TABLE public.finalassesment_konservasis OWNER TO rsyarsi;
 
 --
--- TOC entry 233 (class 1259 OID 16519)
+-- TOC entry 235 (class 1259 OID 16519)
 -- Name: finalassesment_orthodonties; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3015,7 +3015,7 @@ CREATE TABLE public.finalassesment_orthodonties (
 ALTER TABLE public.finalassesment_orthodonties OWNER TO rsyarsi;
 
 --
--- TOC entry 234 (class 1259 OID 16525)
+-- TOC entry 236 (class 1259 OID 16525)
 -- Name: finalassesment_periodonties; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3042,7 +3042,7 @@ CREATE TABLE public.finalassesment_periodonties (
 ALTER TABLE public.finalassesment_periodonties OWNER TO rsyarsi;
 
 --
--- TOC entry 235 (class 1259 OID 16531)
+-- TOC entry 237 (class 1259 OID 16531)
 -- Name: finalassesment_prostodonties; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3066,7 +3066,7 @@ CREATE TABLE public.finalassesment_prostodonties (
 ALTER TABLE public.finalassesment_prostodonties OWNER TO rsyarsi;
 
 --
--- TOC entry 236 (class 1259 OID 16537)
+-- TOC entry 238 (class 1259 OID 16537)
 -- Name: finalassesment_radiologies; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3096,7 +3096,7 @@ CREATE TABLE public.finalassesment_radiologies (
 ALTER TABLE public.finalassesment_radiologies OWNER TO rsyarsi;
 
 --
--- TOC entry 237 (class 1259 OID 16543)
+-- TOC entry 239 (class 1259 OID 16543)
 -- Name: hospitals; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3112,7 +3112,7 @@ CREATE TABLE public.hospitals (
 ALTER TABLE public.hospitals OWNER TO rsyarsi;
 
 --
--- TOC entry 238 (class 1259 OID 16547)
+-- TOC entry 240 (class 1259 OID 16547)
 -- Name: lectures; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3131,7 +3131,7 @@ CREATE TABLE public.lectures (
 ALTER TABLE public.lectures OWNER TO rsyarsi;
 
 --
--- TOC entry 239 (class 1259 OID 16550)
+-- TOC entry 241 (class 1259 OID 16550)
 -- Name: migrations; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3145,7 +3145,7 @@ CREATE TABLE public.migrations (
 ALTER TABLE public.migrations OWNER TO rsyarsi;
 
 --
--- TOC entry 240 (class 1259 OID 16553)
+-- TOC entry 242 (class 1259 OID 16553)
 -- Name: migrations_id_seq; Type: SEQUENCE; Schema: public; Owner: rsyarsi
 --
 
@@ -3161,8 +3161,8 @@ CREATE SEQUENCE public.migrations_id_seq
 ALTER TABLE public.migrations_id_seq OWNER TO rsyarsi;
 
 --
--- TOC entry 3770 (class 0 OID 0)
--- Dependencies: 240
+-- TOC entry 3772 (class 0 OID 0)
+-- Dependencies: 242
 -- Name: migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: rsyarsi
 --
 
@@ -3170,7 +3170,7 @@ ALTER SEQUENCE public.migrations_id_seq OWNED BY public.migrations.id;
 
 
 --
--- TOC entry 241 (class 1259 OID 16554)
+-- TOC entry 243 (class 1259 OID 16554)
 -- Name: password_resets; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3184,7 +3184,7 @@ CREATE TABLE public.password_resets (
 ALTER TABLE public.password_resets OWNER TO rsyarsi;
 
 --
--- TOC entry 242 (class 1259 OID 16559)
+-- TOC entry 244 (class 1259 OID 16559)
 -- Name: patients; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3212,7 +3212,7 @@ CREATE TABLE public.patients (
 ALTER TABLE public.patients OWNER TO rsyarsi;
 
 --
--- TOC entry 243 (class 1259 OID 16564)
+-- TOC entry 245 (class 1259 OID 16564)
 -- Name: personal_access_tokens; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3232,7 +3232,7 @@ CREATE TABLE public.personal_access_tokens (
 ALTER TABLE public.personal_access_tokens OWNER TO rsyarsi;
 
 --
--- TOC entry 244 (class 1259 OID 16569)
+-- TOC entry 246 (class 1259 OID 16569)
 -- Name: personal_access_tokens_id_seq; Type: SEQUENCE; Schema: public; Owner: rsyarsi
 --
 
@@ -3247,8 +3247,8 @@ CREATE SEQUENCE public.personal_access_tokens_id_seq
 ALTER TABLE public.personal_access_tokens_id_seq OWNER TO rsyarsi;
 
 --
--- TOC entry 3771 (class 0 OID 0)
--- Dependencies: 244
+-- TOC entry 3773 (class 0 OID 0)
+-- Dependencies: 246
 -- Name: personal_access_tokens_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: rsyarsi
 --
 
@@ -3256,7 +3256,7 @@ ALTER SEQUENCE public.personal_access_tokens_id_seq OWNED BY public.personal_acc
 
 
 --
--- TOC entry 245 (class 1259 OID 16570)
+-- TOC entry 247 (class 1259 OID 16570)
 -- Name: semesters; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3273,7 +3273,7 @@ CREATE TABLE public.semesters (
 ALTER TABLE public.semesters OWNER TO rsyarsi;
 
 --
--- TOC entry 246 (class 1259 OID 16573)
+-- TOC entry 248 (class 1259 OID 16573)
 -- Name: specialistgroups; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3289,7 +3289,7 @@ CREATE TABLE public.specialistgroups (
 ALTER TABLE public.specialistgroups OWNER TO rsyarsi;
 
 --
--- TOC entry 247 (class 1259 OID 16576)
+-- TOC entry 249 (class 1259 OID 16576)
 -- Name: specialists; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3307,7 +3307,7 @@ CREATE TABLE public.specialists (
 ALTER TABLE public.specialists OWNER TO rsyarsi;
 
 --
--- TOC entry 248 (class 1259 OID 16579)
+-- TOC entry 250 (class 1259 OID 16579)
 -- Name: students; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3330,7 +3330,7 @@ CREATE TABLE public.students (
 ALTER TABLE public.students OWNER TO rsyarsi;
 
 --
--- TOC entry 249 (class 1259 OID 16582)
+-- TOC entry 251 (class 1259 OID 16582)
 -- Name: trsassesments; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3361,7 +3361,7 @@ CREATE TABLE public.trsassesments (
 ALTER TABLE public.trsassesments OWNER TO rsyarsi;
 
 --
--- TOC entry 250 (class 1259 OID 16589)
+-- TOC entry 252 (class 1259 OID 16589)
 -- Name: type_one_control_trsdetailassesments; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3383,7 +3383,7 @@ CREATE TABLE public.type_one_control_trsdetailassesments (
 ALTER TABLE public.type_one_control_trsdetailassesments OWNER TO rsyarsi;
 
 --
--- TOC entry 251 (class 1259 OID 16594)
+-- TOC entry 253 (class 1259 OID 16594)
 -- Name: trassesmentdetailtypeonecontrol; Type: VIEW; Schema: public; Owner: rsyarsi
 --
 
@@ -3414,7 +3414,7 @@ CREATE VIEW public.trassesmentdetailtypeonecontrol AS
 ALTER TABLE public.trassesmentdetailtypeonecontrol OWNER TO rsyarsi;
 
 --
--- TOC entry 252 (class 1259 OID 16599)
+-- TOC entry 254 (class 1259 OID 16599)
 -- Name: type_five_trsdetailassesments; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3444,7 +3444,7 @@ CREATE TABLE public.type_five_trsdetailassesments (
 ALTER TABLE public.type_five_trsdetailassesments OWNER TO rsyarsi;
 
 --
--- TOC entry 253 (class 1259 OID 16604)
+-- TOC entry 255 (class 1259 OID 16604)
 -- Name: trsassesmentdetailtypefive; Type: VIEW; Schema: public; Owner: rsyarsi
 --
 
@@ -3480,7 +3480,7 @@ CREATE VIEW public.trsassesmentdetailtypefive AS
 ALTER TABLE public.trsassesmentdetailtypefive OWNER TO rsyarsi;
 
 --
--- TOC entry 254 (class 1259 OID 16609)
+-- TOC entry 256 (class 1259 OID 16609)
 -- Name: type_four_trsdetailassesments; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3503,7 +3503,7 @@ CREATE TABLE public.type_four_trsdetailassesments (
 ALTER TABLE public.type_four_trsdetailassesments OWNER TO rsyarsi;
 
 --
--- TOC entry 255 (class 1259 OID 16614)
+-- TOC entry 257 (class 1259 OID 16614)
 -- Name: trsassesmentdetailtypefour; Type: VIEW; Schema: public; Owner: rsyarsi
 --
 
@@ -3536,7 +3536,7 @@ CREATE VIEW public.trsassesmentdetailtypefour AS
 ALTER TABLE public.trsassesmentdetailtypefour OWNER TO rsyarsi;
 
 --
--- TOC entry 256 (class 1259 OID 16619)
+-- TOC entry 258 (class 1259 OID 16619)
 -- Name: type_one_trsdetailassesments; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3560,7 +3560,7 @@ CREATE TABLE public.type_one_trsdetailassesments (
 ALTER TABLE public.type_one_trsdetailassesments OWNER TO rsyarsi;
 
 --
--- TOC entry 257 (class 1259 OID 16624)
+-- TOC entry 259 (class 1259 OID 16624)
 -- Name: trsassesmentdetailtypeone; Type: VIEW; Schema: public; Owner: rsyarsi
 --
 
@@ -3592,7 +3592,7 @@ CREATE VIEW public.trsassesmentdetailtypeone AS
 ALTER TABLE public.trsassesmentdetailtypeone OWNER TO rsyarsi;
 
 --
--- TOC entry 258 (class 1259 OID 16629)
+-- TOC entry 260 (class 1259 OID 16629)
 -- Name: type_three_trsdetailassesments; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3618,7 +3618,7 @@ CREATE TABLE public.type_three_trsdetailassesments (
 ALTER TABLE public.type_three_trsdetailassesments OWNER TO rsyarsi;
 
 --
--- TOC entry 259 (class 1259 OID 16634)
+-- TOC entry 261 (class 1259 OID 16634)
 -- Name: trsassesmentdetailtypethree; Type: VIEW; Schema: public; Owner: rsyarsi
 --
 
@@ -3653,7 +3653,7 @@ CREATE VIEW public.trsassesmentdetailtypethree AS
 ALTER TABLE public.trsassesmentdetailtypethree OWNER TO rsyarsi;
 
 --
--- TOC entry 260 (class 1259 OID 16639)
+-- TOC entry 262 (class 1259 OID 16639)
 -- Name: universities; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3669,7 +3669,7 @@ CREATE TABLE public.universities (
 ALTER TABLE public.universities OWNER TO rsyarsi;
 
 --
--- TOC entry 261 (class 1259 OID 16643)
+-- TOC entry 263 (class 1259 OID 16643)
 -- Name: users; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -3692,7 +3692,7 @@ CREATE TABLE public.users (
 ALTER TABLE public.users OWNER TO rsyarsi;
 
 --
--- TOC entry 262 (class 1259 OID 16648)
+-- TOC entry 264 (class 1259 OID 16648)
 -- Name: view_history_emrkonservasis; Type: VIEW; Schema: public; Owner: rsyarsi
 --
 
@@ -4005,7 +4005,7 @@ CREATE VIEW public.view_history_emrkonservasis AS
 ALTER TABLE public.view_history_emrkonservasis OWNER TO rsyarsi;
 
 --
--- TOC entry 263 (class 1259 OID 16653)
+-- TOC entry 265 (class 1259 OID 16653)
 -- Name: view_history_emrortodonsies; Type: VIEW; Schema: public; Owner: rsyarsi
 --
 
@@ -4266,7 +4266,7 @@ CREATE VIEW public.view_history_emrortodonsies AS
 ALTER TABLE public.view_history_emrortodonsies OWNER TO rsyarsi;
 
 --
--- TOC entry 264 (class 1259 OID 16658)
+-- TOC entry 266 (class 1259 OID 16658)
 -- Name: view_history_emrpedodonties; Type: VIEW; Schema: public; Owner: rsyarsi
 --
 
@@ -4415,7 +4415,7 @@ CREATE VIEW public.view_history_emrpedodonties AS
 ALTER TABLE public.view_history_emrpedodonties OWNER TO rsyarsi;
 
 --
--- TOC entry 265 (class 1259 OID 16663)
+-- TOC entry 267 (class 1259 OID 16663)
 -- Name: view_history_emrperiodonties; Type: VIEW; Schema: public; Owner: rsyarsi
 --
 
@@ -5359,7 +5359,7 @@ CREATE VIEW public.view_history_emrperiodonties AS
 ALTER TABLE public.view_history_emrperiodonties OWNER TO rsyarsi;
 
 --
--- TOC entry 266 (class 1259 OID 16668)
+-- TOC entry 268 (class 1259 OID 16668)
 -- Name: view_history_emrprostodonties; Type: VIEW; Schema: public; Owner: rsyarsi
 --
 
@@ -5573,7 +5573,7 @@ CREATE VIEW public.view_history_emrprostodonties AS
 ALTER TABLE public.view_history_emrprostodonties OWNER TO rsyarsi;
 
 --
--- TOC entry 267 (class 1259 OID 16673)
+-- TOC entry 269 (class 1259 OID 16673)
 -- Name: view_history_emrradiologies; Type: VIEW; Schema: public; Owner: rsyarsi
 --
 
@@ -5622,7 +5622,7 @@ CREATE VIEW public.view_history_emrradiologies AS
 ALTER TABLE public.view_history_emrradiologies OWNER TO rsyarsi;
 
 --
--- TOC entry 268 (class 1259 OID 16678)
+-- TOC entry 270 (class 1259 OID 16678)
 -- Name: viewabsencemonthreport; Type: VIEW; Schema: public; Owner: rsyarsi
 --
 
@@ -5641,7 +5641,7 @@ CREATE VIEW public.viewabsencemonthreport AS
 ALTER TABLE public.viewabsencemonthreport OWNER TO rsyarsi;
 
 --
--- TOC entry 269 (class 1259 OID 16682)
+-- TOC entry 271 (class 1259 OID 16682)
 -- Name: viewassesmentdetailbygrouptypes; Type: VIEW; Schema: public; Owner: rsyarsi
 --
 
@@ -5670,7 +5670,7 @@ CREATE VIEW public.viewassesmentdetailbygrouptypes AS
 ALTER TABLE public.viewassesmentdetailbygrouptypes OWNER TO rsyarsi;
 
 --
--- TOC entry 270 (class 1259 OID 16687)
+-- TOC entry 272 (class 1259 OID 16687)
 -- Name: years; Type: TABLE; Schema: public; Owner: rsyarsi
 --
 
@@ -5686,7 +5686,7 @@ CREATE TABLE public.years (
 ALTER TABLE public.years OWNER TO rsyarsi;
 
 --
--- TOC entry 271 (class 1259 OID 16691)
+-- TOC entry 273 (class 1259 OID 16691)
 -- Name: viewtrsassesmentheader; Type: VIEW; Schema: public; Owner: rsyarsi
 --
 
@@ -5724,7 +5724,7 @@ CREATE VIEW public.viewtrsassesmentheader AS
 ALTER TABLE public.viewtrsassesmentheader OWNER TO rsyarsi;
 
 --
--- TOC entry 3454 (class 2604 OID 16696)
+-- TOC entry 3456 (class 2604 OID 16696)
 -- Name: failed_jobs id; Type: DEFAULT; Schema: public; Owner: rsyarsi
 --
 
@@ -5732,7 +5732,7 @@ ALTER TABLE ONLY public.failed_jobs ALTER COLUMN id SET DEFAULT nextval('public.
 
 
 --
--- TOC entry 3461 (class 2604 OID 16697)
+-- TOC entry 3463 (class 2604 OID 16697)
 -- Name: migrations id; Type: DEFAULT; Schema: public; Owner: rsyarsi
 --
 
@@ -5740,7 +5740,7 @@ ALTER TABLE ONLY public.migrations ALTER COLUMN id SET DEFAULT nextval('public.m
 
 
 --
--- TOC entry 3462 (class 2604 OID 16698)
+-- TOC entry 3464 (class 2604 OID 16698)
 -- Name: personal_access_tokens id; Type: DEFAULT; Schema: public; Owner: rsyarsi
 --
 
@@ -5748,8 +5748,8 @@ ALTER TABLE ONLY public.personal_access_tokens ALTER COLUMN id SET DEFAULT nextv
 
 
 --
--- TOC entry 3706 (class 0 OID 16423)
--- Dependencies: 214
+-- TOC entry 3708 (class 0 OID 16423)
+-- Dependencies: 216
 -- Data for Name: absencestudents; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -5772,12 +5772,14 @@ cb94ce2c-9d73-419b-8666-da0e83983e47	3b358ee0-c278-4cee-8c99-55d87d2bc142	2024-0
 8f1e880b-67d6-4c0f-8a2b-f4670c768da9	a9c3e3af-a31e-4ab0-be8d-f7035c065805	2024-05-28 09:17:42	\N	2024-05-28	IN	\N	\N	2024-05
 6660d83e-1b5e-4488-90c9-6f4dbb7270fe	847d4b7b-d2d4-4711-a3c8-793b8e046886	2024-05-28 09:19:59	\N	2024-05-28	IN	\N	\N	2024-05
 e7898ed4-5d62-46b8-8432-a40a5a13959d	515b8bca-8641-497e-8cea-652286f98d56	2024-05-28 09:24:30	\N	2024-05-28	IN	\N	\N	2024-05
+48f87f0f-6542-44b8-a5c7-7715f2781250	3b358ee0-c278-4cee-8c99-55d87d2bc142	2024-06-02 20:37:19	\N	2024-06-02	IN	\N	\N	2024-06
+7bb853dd-dd0e-4eed-8199-57965c5f48b1	3b358ee0-c278-4cee-8c99-55d87d2bc142	2024-06-12 15:19:36	\N	2024-06-12	IN	2024-06-12 15:19:36	\N	2024-06
 \.
 
 
 --
--- TOC entry 3707 (class 0 OID 16426)
--- Dependencies: 215
+-- TOC entry 3709 (class 0 OID 16426)
+-- Dependencies: 217
 -- Data for Name: assesmentdetails; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6334,8 +6336,8 @@ b1bde434-acb3-4d0e-b5ea-f22e0b0940ef	27dc8ac4-7abf-4a92-9c03-2ae5f60be28e	1	Mene
 
 
 --
--- TOC entry 3708 (class 0 OID 16433)
--- Dependencies: 216
+-- TOC entry 3710 (class 0 OID 16433)
+-- Dependencies: 218
 -- Data for Name: assesmentgroupfinals; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6365,8 +6367,8 @@ b2993f96-fe1c-443d-b655-c61ea86ec9b3	PEKERJAAN KLINIK PEMERIKSAAN - PEDO	1	\N	\N
 
 
 --
--- TOC entry 3709 (class 0 OID 16438)
--- Dependencies: 217
+-- TOC entry 3711 (class 0 OID 16438)
+-- Dependencies: 219
 -- Data for Name: assesmentgroups; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6418,15 +6420,15 @@ b131b399-9b47-4b91-8504-d8047c6b3576	5756d1b9-34b4-4d49-b5fb-76b68bbd736e	Prosed
 27dc8ac4-7abf-4a92-9c03-2ae5f60be28e	cf504bf3-803c-432c-afe1-d718824359d5	DOPS	1	1	\N	2024-04-23 19:59:17	100	0	49f20cd5-0ed3-4f3c-85a2-091ec3a9c2e4	10
 8f01380d-cf81-4e20-9fb1-6e416b18ab5a	cf504bf3-803c-432c-afe1-d718824359d5	PENYAJI JR	1	1	\N	2024-04-23 19:12:44	80	0	6456b43f-f3da-4a19-8797-a17085a6f2bb	10
 18ba4183-db88-4de8-af99-6dd83d9b075d	cf504bf3-803c-432c-afe1-d718824359d5	Radiografi Intraoral Periapikal	1	1	\N	2024-04-23 19:12:28	100	0	49f20cd5-0ed3-4f3c-85a2-091ec3a9c2e4	5
-700d3334-6b14-4b7a-8973-dc0470f55c51	cf504bf3-803c-432c-afe1-d718824359d5	VIDEO TEKNIK RADIOGRAFI INTRAORAL PERIAPIKAL	1	1	\N	2024-04-23 19:12:33	80	0	51c0074b-95a0-4612-b36d-a5d160fcc42b	5
 97e25278-15f0-4436-9413-548ddb1edac2	cf504bf3-803c-432c-afe1-d718824359d5	INTERPRETASI RADIOGRAF INTRAORAL	1	1	\N	2024-04-23 19:12:57	100	0	51c0074b-95a0-4612-b36d-a5d160fcc42b	5
 2569196c-7dfd-4ab3-9845-0cc1fe7fc1e9	cf504bf3-803c-432c-afe1-d718824359d5	LEMBAR  INTERPRETASI EKSTRAORAL	1	1	\N	2024-04-23 19:13:23	80	0	51c0074b-95a0-4612-b36d-a5d160fcc42b	5
+700d3334-6b14-4b7a-8973-dc0470f55c51	cf504bf3-803c-432c-afe1-d718824359d5	TEKNIK RADIOGRAFI INTRAORAL PERIAPIKAL	1	1	\N	2024-06-12 14:12:10	80	0	51c0074b-95a0-4612-b36d-a5d160fcc42b	5
 \.
 
 
 --
--- TOC entry 3710 (class 0 OID 16444)
--- Dependencies: 218
+-- TOC entry 3712 (class 0 OID 16444)
+-- Dependencies: 220
 -- Data for Name: emrkonservasi_jobs; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6487,8 +6489,8 @@ fd95d49a-41ce-4a63-8d3a-ab235624daf6	2024-05-28 01:27:10	Gigi 21	Kontrol\n- Tida
 
 
 --
--- TOC entry 3711 (class 0 OID 16450)
--- Dependencies: 219
+-- TOC entry 3713 (class 0 OID 16450)
+-- Dependencies: 221
 -- Data for Name: emrkonservasis; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6511,7 +6513,6 @@ fb19fecd-0968-4277-81a8-98e830e075f9	RJJP010324-0136	OP067212-010324-0365	06-72-
 f22d5e89-4426-46c1-9c81-76a3055836b0	RJJP070324-0325	OP073105-070324-0116	07-31-05	2024-03-07 09:21:14	RADIUS DELANO TRI SATYA, TN	KARYAWAN/TI	M	PONDOK KOPI BLOK U.I NO 10 RT 007/006	087889653567	Laras Fajri Nanda Widiiswa	4122023038	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	+	+	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	PN D3(1,2)	PR D4(1,2)	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	composite	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2024-05-27 10:17:53	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/konservasi/reparasi/beofre/d1ef71a2-e629-4ec2-929e-6469dfe0b013.heic	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/konservasi/reparasi/beofre/bb4f8f09-8c3b-45a6-8ad5-22a239687876.heic	\N	\N	\N	\N	\N	\N	WRITE	\N
 83918a99-6994-4705-8b66-a8a56b10583f	RJJP210324-0186	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023035	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 4ecf16ee-528f-408d-9c33-de5b7057f143	RJJP200324-0424	OP074808-200324-0090	07-48-08	2024-03-20 12:30:14	ANGGI PRASETYO, TN	SWASTA	M	JL. BATU	085777037071	Laras Fajri Nanda Widiiswa	4122023038	+	\N	+	\N	+	\N	+	\N	+	\N	\N	+	\N	\N	+	+	PN D3 (1,2)	\N	PN D3 (1,2)	\N	PN D3 (3,1)	\N	PN D3 (2,2)	\N	PN D3 (2,2)	\N	\N	PN D3 (3,1)	\N	MISS	PN D3(1,2)	PN D3 (1,2)	\N	\N	\N	\N	Composite	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	+	+	+	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	RRX	PN D3 (1,2)	PN D3 (1,2)	PN D3(1,2)	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2024-05-27 10:50:43	\N	\N	\N	\N	\N	\N	\N	\N	WRITE	\N
-3420d0e2-9532-4e4e-b390-a24c88274678	RJJP080524-0672	OP073195-080524-0092	07-31-95	2024-05-08 15:56:01	FAIKA ZAHRA CHAIRUNISA, NN	MAHASISWA	F	JL SPG VII	081383845586	Sahri Muhamad Risky	4122023043	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	PN D4 1,1	PN D3 1,1	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	PN D4 1,2	PN D4 1,1	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	PN D4 1,2	PN D4 1,2	\N	\N	PN D4 1,2	PN D4 1,2	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2024-05-27 13:32:51	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/konservasi/reparasi/beofre/861b1cfa-77d8-44b2-911b-0095b57984b3.jpeg	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/konservasi/reparasi/beofre/c0196de1-77d3-43d3-b6be-5f07181086fc.jpeg	\N	\N	\N	\N	\N	\N	WRITE	\N
 d46c2481-daa9-4986-a085-ceeaa3885134	RJJP040324-0183	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023041	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2024-05-27 21:47:50	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/konservasi/reparasi/beofre/835c1c2a-0354-401e-9768-1273d76c6302.jpeg	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/konservasi/reparasi/beofre/0def5923-b68b-4315-b218-447af61a2baa.jpeg	\N	\N	\N	\N	\N	\N	WRITE	\N
 ad454423-6988-4fdc-83cf-a6a303e5378c	RJJP180324-0240	OP074808-150324-0254	07-48-08	2024-03-18 08:44:13	ANGGI PRASETYO, TN	SWASTA	M	JL. BATU	085777037071	Laras Fajri Nanda Widiiswa	4122023038	+	\N	+	\N	+	\N	\N	\N	+	\N	\N	+	\N	\N	\N	\N	PN D3(1,2)	\N	PN D3 (1,2)	\N	PN D3 (3,1)	\N	\N	\N	PN D3 (2,2)	\N	\N	PN D3 (3,1)	\N	missing	PN D3 (1,2)	\N	\N	\N	\N	\N	Composite	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	+	+	+	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	RRX	PN D3 (1,2)	PN D3 (1,2)	PN D3 (1,2)	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2024-05-27 10:42:51	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/konservasi/reparasi/beofre/4ec4962f-919b-4aa1-8bc7-a5db27fa199d.heic	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/konservasi/reparasi/beofre/54482604-eaaa-4ce0-8bee-f5b43e9e8fcd.jpeg	\N	\N	\N	\N	\N	\N	WRITE	\N
 00fd1210-de37-4b52-871b-a0d1ab771c2b	RJJP130324-0566	OP071328-130324-0403	07-13-28	2024-03-13 14:00:28	MARLINA BINTI MARTO ,NY	KARYAWAN/TI	F	JL SALEMBA TENGAH	083874693982	Laras Fajri Nanda Widiiswa	4122023038	\N	\N	\N	\N	\N	\N	+	+	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	PR D4(2,1)	PR D4(2,2)	\N	\N	\N	\N	\N	RRX	\N	\N	\N	\N	\N	\N	\N	\N	composite	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	+	\N	\N	\N	\N	\N	\N	\N	\N	MISS	\N	\N	\N	\N	\N	MISS	PN D3(1,1)	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2024-05-27 11:00:37	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/konservasi/reparasi/beofre/cb758d48-ac7b-4cdc-9848-db8fb8a693cf.heic	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/konservasi/reparasi/beofre/e94411bd-ded3-4471-a845-044ba1fd23c9.heic	\N	\N	\N	\N	\N	\N	WRITE	\N
@@ -6568,12 +6569,13 @@ f2541d7b-743d-4206-98b8-290c3bffd954	RJJP270324-0516	\N	\N	\N	\N	\N	\N	\N	\N	\N	
 457b0e5c-fbde-4231-8909-6d2370ad0ac4	RJJP030424-0306	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023044	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 37ae6908-b0b0-4a08-b61a-a4c41cd79668	RJJP240424-0386	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023044	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 60b254d1-47a2-46b5-b407-247413491070	RJJP300524-0266	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023032	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+3420d0e2-9532-4e4e-b390-a24c88274678	RJJP080524-0672	OP073195-080524-0092	07-31-95	2024-05-08 15:56:01	FAIKA ZAHRA CHAIRUNISA, NN	MAHASISWA	F	JL SPG VII	081383845586	Sahri Muhamad Risky	4122023043	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	PN D4 1,1	PN D3 1,1	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	PN D4 1,2	PN D4 1,1	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	PN D4 1,2	PN D4 1,2	\N	\N	PN D4 1,2	PN D4 1,2	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2024-05-27 13:32:51	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/konservasi/reparasi/beofre/861b1cfa-77d8-44b2-911b-0095b57984b3.jpeg	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/konservasi/reparasi/beofre/c0196de1-77d3-43d3-b6be-5f07181086fc.jpeg	\N	\N	\N	\N	\N	\N	WRITE	WRITE
 \.
 
 
 --
--- TOC entry 3712 (class 0 OID 16455)
--- Dependencies: 220
+-- TOC entry 3714 (class 0 OID 16455)
+-- Dependencies: 222
 -- Data for Name: emrortodonsies; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6583,8 +6585,8 @@ COPY public.emrortodonsies (id, noregister, noepisode, operator, nim, pembimbing
 
 
 --
--- TOC entry 3713 (class 0 OID 16460)
--- Dependencies: 221
+-- TOC entry 3715 (class 0 OID 16460)
+-- Dependencies: 223
 -- Data for Name: emrpedodontie_behaviorratings; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6593,8 +6595,8 @@ COPY public.emrpedodontie_behaviorratings (id, emrid, frankscale, beforetreatmen
 
 
 --
--- TOC entry 3714 (class 0 OID 16465)
--- Dependencies: 222
+-- TOC entry 3716 (class 0 OID 16465)
+-- Dependencies: 224
 -- Data for Name: emrpedodontie_treatmenplans; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6606,8 +6608,8 @@ e354713b-b950-440d-bfd5-b70fcef69b76	6a3bb3e7-f0b7-4674-ab4a-a8beee098d26	TEST O
 
 
 --
--- TOC entry 3715 (class 0 OID 16470)
--- Dependencies: 223
+-- TOC entry 3717 (class 0 OID 16470)
+-- Dependencies: 225
 -- Data for Name: emrpedodontie_treatmens; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6617,8 +6619,8 @@ COPY public.emrpedodontie_treatmens (id, emrid, datetreatment, itemtreatment, us
 
 
 --
--- TOC entry 3716 (class 0 OID 16475)
--- Dependencies: 224
+-- TOC entry 3718 (class 0 OID 16475)
+-- Dependencies: 226
 -- Data for Name: emrpedodonties; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6629,8 +6631,8 @@ cf203318-6fec-4761-b48d-e46df0ab54fb	\N	4122023034	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 
 
 --
--- TOC entry 3717 (class 0 OID 16480)
--- Dependencies: 225
+-- TOC entry 3719 (class 0 OID 16480)
+-- Dependencies: 227
 -- Data for Name: emrperiodontie_soaps; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6640,8 +6642,8 @@ COPY public.emrperiodontie_soaps (id, datesoap, terapi_s, terapi_o, terapi_a, te
 
 
 --
--- TOC entry 3718 (class 0 OID 16486)
--- Dependencies: 226
+-- TOC entry 3720 (class 0 OID 16486)
+-- Dependencies: 228
 -- Data for Name: emrperiodonties; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6662,8 +6664,8 @@ bdd753d8-4e17-418d-a5aa-afc56fe91662	\N	4122023032	\N	\N	RJJP300524-0354	\N	\N	\
 
 
 --
--- TOC entry 3719 (class 0 OID 16491)
--- Dependencies: 227
+-- TOC entry 3721 (class 0 OID 16491)
+-- Dependencies: 229
 -- Data for Name: emrprostodontie_logbooks; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6672,8 +6674,8 @@ COPY public.emrprostodontie_logbooks (id, dateentri, work, usernameentry, userna
 
 
 --
--- TOC entry 3720 (class 0 OID 16496)
--- Dependencies: 228
+-- TOC entry 3722 (class 0 OID 16496)
+-- Dependencies: 230
 -- Data for Name: emrprostodonties; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6683,15 +6685,13 @@ COPY public.emrprostodonties (id, noregister, noepisode, nomorrekammedik, tangga
 
 
 --
--- TOC entry 3721 (class 0 OID 16501)
--- Dependencies: 229
+-- TOC entry 3723 (class 0 OID 16501)
+-- Dependencies: 231
 -- Data for Name: emrradiologies; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
 COPY public.emrradiologies (id, noepisode, noregistrasi, nomr, namapasien, alamat, usia, tglpotret, diagnosaklinik, foto, jenisradiologi, periaprikal_int_mahkota, periaprikal_int_akar, periaprikal_int_membran, periaprikal_int_lamina_dura, periaprikal_int_furkasi, periaprikal_int_alveoral, periaprikal_int_kondisi_periaprikal, periaprikal_int_kesan, periaprikal_int_lesigigi, periaprikal_int_suspek, nim, namaoperator, namadokter, panoramik_miising_teeth, panoramik_missing_agnesia, panoramik_persistensi, panoramik_impaki, panoramik_kondisi_mahkota, panoramik_kondisi_akar, panoramik_kondisi_alveoral, panoramik_kondisi_periaprikal, panoramik_area_dua, oklusal_kesan, oklusal_suspek_radiognosis, status_emr, status_penilaian, jenis_radiologi, url) FROM stdin;
-cd8d55d3-22b1-4bb1-86c8-f82c3915d90d	-	RKG080524-6876	-	Periapikal 1	-	0	\N	\N	\N	PERIAPIKAL	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023042	\N	drg. Alongsyah,Sp.RKG.,Subsp.R.D.P (K)	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	OPEN	OPEN	PERIAPIKAL	\N
 7cc7438c-eac0-4a4a-b188-cec3b308aef1	-	RKG270524-2501	-	Panoramik	Cempaka putih	19	2024-05-27	Odontogenic keratocyst	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/radiologi/14ff8805-c35d-4fcc-ba48-5669c58f7542.png	PANORAMIK	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023032	Ivan Hasan	drg. Alongsyah,Sp.RKG.,Subsp.R.D.P (K)	Dalam batas normal	Dalam batas normal	Tidak ada persistensi	Dalam batas normal	Terdapat gambaran radiopak pada gigi 36	Terdapat gambaran radiopak pada gigi 36	Dalam batas normal	Terdapat gambaran radiolusen berbatas jelas dan tegas pada angulus mandibula	Dalam batas normal	\N	\N	WRITE	OPEN	PANORAMIK	\N
-b5c774be-cc76-4ef4-b416-8055993aa6c8	-	RKG160524-3183	-	Periapikal 1	-	0	\N	hbi	\N	PERIAPIKAL	'hib	bhi'IHB	bhi'	b'hi	'bhiobh	O"BH"	bhioBHI"	'obhi'	'bhi	'bhi	4122023042	\N	drg. Resky Mustafa,M. Kes.,Sp.RKG	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	WRITE	WRITE	PERIAPIKAL	\N
 2c997aa8-5fea-4acd-a6d7-7c3818273e0b	-	RKG080524-2232	-	periapikal 1	-	0	\N	Pulp Stone	\N	PERIAPIKAL	DBN	Akar tunggal dan lurus terdapat gambaran radiopak pada bagian 2/3 dari apeks, akar terbuka	Melebar	DBN	-	DBN	-	Kelainan pada akar, membran periodontal	-	Pulp Stone\nDD : Dens Invaginatus \nDD 2 : Sklerosis Pulpa	4122023045	Shabrina Ghisani M	drg. Alongsyah,Sp.RKG.,Subsp.R.D.P (K)	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	WRITE	OPEN	PERIAPIKAL	\N
 5b100b93-34f2-4931-9862-f124c2bc9c22	-	RKG080524-5991	-	-	Jl. X	0	\N	\N	\N	PERIAPIKAL	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023039	\N	drg. Resky Mustafa,M. Kes.,Sp.RKG	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	OPEN	OPEN	PERIAPIKAL	\N
 aa3d14b8-9a43-4fb6-8690-8120576ac1e8	-	RKG080524-2580	-	periapikal 1	-	0	\N	\N	\N	PERIAPIKAL	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023024	\N	drg. Resky Mustafa,M. Kes.,Sp.RKG	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	OPEN	OPEN	PERIAPIKAL	\N
@@ -6699,12 +6699,13 @@ aa3d14b8-9a43-4fb6-8690-8120576ac1e8	-	RKG080524-2580	-	periapikal 1	-	0	\N	\N	\
 e9326f2e-f78e-42bb-8ab0-579594cb4074	-	RKG080524-3144	-	Ny.X	Jalan. Y	0	\N	\N	\N	PERIAPIKAL	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023037	\N	drg. Resky Mustafa,M. Kes.,Sp.RKG	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	OPEN	OPEN	PERIAPIKAL	\N
 4232b6ed-ffc7-42fe-bd5e-cf8b02679054	-	RKG080524-8580	-	Periapikal 1	cempaka putih	0	\N	\N	\N	PERIAPIKAL	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023025	\N	drg. Resky Mustafa,M. Kes.,Sp.RKG	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	OPEN	OPEN	PERIAPIKAL	\N
 4a1703fd-e925-4bb7-a592-e1451f6f9bbe	-	RKG080524-3208	-	Periapikal 1	-	0	\N	\N	\N	PERIAPIKAL	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Breaniza Dhari	\N	drg. Resky Mustafa,M. Kes.,Sp.RKG	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	OPEN	OPEN	PERIAPIKAL	\N
-69e07368-6378-49b5-a83f-cb156e07acdf	-	RKG080524-7020	-	Periapikal 1	-	0	2024-05-08	Abses Periapikal	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/radiologi/08a88267-4d02-412e-95d2-a4eaeda0ea84.png	PERIAPIKAL	terdapat gambaran radiopak pada mahkota gigi	terdapat gambaran radiopak pada saluran akar	membran periodontal distal = 1/3 servikal : dalam batas normal, 1/3 tengah : mengihlang. 1/3 apikal : menghilang\n\nmembran periodontal mesial = 1/3 servikal : dalam batas normal, 1/3 tengah : mengihlang. 1/3 apikal : menghilang	lamina dura distal = 1/3 servikal : dalam batas normal, 1/3 tengah : menghilang, 1/3 apikal : menghilang\n\nlamina dura mesial = 1/3 servikal : dalam batas normal, 1/3 tengah : menghilang, 1/3 apikal : menghilang	tidak terdapat furkasi	dalam batas normal	terdapat gambaran radiolusen berbatas tidak jelas dan tidak tegas pada gigi 25 dari 1/3 setengah akar sampai 1/3 apikal akar	terdapat kelainan pada mahkota, akar, lamina dura, membran periodontal, periapikal	-	abses periapikal	4122023032	Ivan Hasan	drg. Resky Mustafa,M. Kes.,Sp.RKG	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	WRITE	WRITE	PERIAPIKAL	\N
 2d1bc362-11fd-4553-90af-ecafa357c7a3	02	RKG280524-9029	RKG 2	Rivan	Jl. Cemara III No. 7	0	2024-05-28	Cementoblastoma	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/radiologi/333b2c67-c28d-40f7-be0e-0bd1d90acc73.jpeg	PERIAPIKAL	DBN	Terdapat 2 akar dan 2 saluran akar	terputus pada akar distal di 1/3 apikal	Terputus pada akar distal di 1/3 apikal, terputus pada akar mesial di 1/3 apikal	DBN	DBN	Terdapat gambaran radiolusen dan radiopak. Radiopak pada lesi dan dikelilingi gambaran radiolusen	Terdapat kelainan pada akar, membran periodontal, dan lamina dura	Site : periapikal akar distal\nSize: -+ 2 cm\nShape : Reguler\nSymetri : Simetris\nJumlah : 1\nBorder : Berbatas jelas dan tegas\nContent : lesi radiolusen berbatas tegas\nAssociation : laminadura terputus, membran periodontal menghilang pada akar distal	Cementoblastoma \nDD : hypercementosis, Densbond Island	4122023045	Shabrina Ghisani	drg. Resky Mustafa,M. Kes.,Sp.RKG	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	FINISH	OPEN	PERIAPIKAL	\N
 8f4ebd52-576b-46a8-992a-d2201c399794	04	RKG270524-8126	rkg 2	Ny.X/ Periapikal Intepretasi rkg 2	Jakarta	46	2024-05-27	Dilaserasi adalah pembengkokan abnormal pada akar atau mahkota gigi.	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/radiologi/02ef69c4-5632-43d6-8a06-29a1520dc746.png	PERIAPIKAL	Terdapat gambaran radiolusen pada bagian mahkota gigi 46 hingga kamar pulpa bagian distal	Akar berjumlah 2, 2 saluran akar	terputus di 1/3 apikal	menghilang pada 1/3 apikal	terdapat furkasi	dalam batas normal	lamina dura menebal pada 1/3 apikal, dan membran periodontal terputus di 1/3 apikal	terdapat kelainan pada lamina dura menebal pada 1/3 apikal, dan membran periodontal terputus di 1/3 apikal	-	dilaserasi akar \ndd: fusi, dense bond island	4122023025	Amalia Rafa Wulandari	drg. Alongsyah,Sp.RKG.,Subsp.R.D.P (K)	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	WRITE	OPEN	PERIAPIKAL	\N
 c551cbe8-df68-4268-85c2-a14a1074f51e	01	RKG270524-2493	RKG 1	Ny. X	Korea	0	\N	\N	\N	PERIAPIKAL	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023024	\N	drg. Resky Mustafa,M. Kes.,Sp.RKG	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	WRITE	OPEN	PERIAPIKAL	\N
 cfb0ab56-34e4-4ee4-baf8-049e82e7c696	-	RKG250524-2562	-	Periapikal 1	Cempaka Putih	21	2024-05-25	Odontogenic Myxoma	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/radiologi/9d6c90cc-cdf8-434b-8633-c055564e30fd.png	PERIAPIKAL	Terdapat gambaran radiopak pada gigi 26 oklusal dari email hingga kamar pulpa	Dalam batas normal	Menghilang pada apikal akar	Terputus pada 1/3 apikal akar distal gigi 25	Tidak ada furkasi	Adanya penurunan tulang alveolar crest gigi 25 pada mesial secara vertikal	Terdapat gambaran radiolusen berbatas jelas dan tegas dari 1/3 apikal akar distal gigi 25 hingga mesial gigi 26	Terdapat kelainan pada mahkota, membran periodontal, lamina dura, alveolar crest, dan periapikal	Site : Lateral inferior berbatasan dengan gigi 24 dan 25\nSize : kurang lebih 4,5 cm\nShape : irreguler\nSymetri : asimetris\nJumlah : 1\nBorder : Berbatas jelas dan tegas\nContent : Lesi radiolusen dikelilingi batas radiopak	Miksoma adalah tumor jinak yang langka, yang mungkin melibatkan jaringan keras dan lunak. Jika melibatkan jaringan tulang, maka akan mempengaruhi tulang wajah. ditandai dengan jaringan putih keabu-abuan yang bersifat mukoid atau agar-agar yang menggantikan tulang cancellous dan memperluas korteks\n\nDiagnosis banding : Ameloblastoma dan Keratocyst\nPerbedaan :\nMyxoma : tumbuh lambat, jarang terjadi pada usia dibawah 10 tahun dan diatas 50 tahun. bersifat lokal agresif, biasa terjadi pada gigi P (premolar) dan M (molar), jarang terjadi pada ramus dan kondilus.\n\nAmeloblastoma : tumor jinak epitelial odontogenik yang berasal dari jaringan pembentuk gigi yaitu jaringan pembentuk email gigi yang mengalami gangguan perubahan pada saat proses pembentukan gigi.\n\nKeratocyst : kista yang berasal dari gigi (primordial odontogenic epithelium) dan memiliki lapisan keratin serta mempunyai gejala klinis yang agresif yaitu mempunyai tingkat rekuren yang tinggi.\n\nPersamaan :\nMyxoma : tumbuh lambat, lesi radiolusen berbatas jelas dan tegas. dapat menggeser gigi\n\nAmeloblastoma : tumbuh lambat, memiliki batas yang jelas dan tegas. dapat menggeser gigi dan resorpsi akar yang luas\n\nKeratocyst : tumbuh lambat, memiliki batas jelas dan tegas. lesi radiolusen. muncul di mandibula, dapat menggeser gigi	4122023032	Ivan Hasan	drg. Alongsyah,Sp.RKG.,Subsp.R.D.P (K)	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	WRITE	OPEN	PERIAPIKAL	\N
 b8d27e17-5f9f-482d-910a-4ffcbe81a460	3	RKG280524-9586	3	RKG 1 : Periapikal 3 : Tn. C	Jl. C	22	\N	\N	\N	PERIAPIKAL	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023039	\N	drg. Resky Mustafa,M. Kes.,Sp.RKG	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	OPEN	OPEN	PERIAPIKAL	\N
+b5c774be-cc76-4ef4-b416-8055993aa6c8	-	RKG160524-3183	-	Periapikal 1	-	0	\N	hbi	\N	PERIAPIKAL	'hib	bhi'IHB	bhi'	b'hi	'bhiobh	O"BH"	bhioBHI"	'obhi'	'bhi	'bhi	4122023042	\N	drg. Resky Mustafa,M. Kes.,Sp.RKG	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	WRITE	WRITE	PERIAPIKAL	\N
+cd8d55d3-22b1-4bb1-86c8-f82c3915d90d	-	RKG080524-6876	-	Periapikal 1	-	0	\N	\N	\N	PERIAPIKAL	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023042	\N	drg. Alongsyah,Sp.RKG.,Subsp.R.D.P (K)	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	OPEN	FINISH	PERIAPIKAL	\N
 b983a9d8-67a0-4bb7-ad8e-7d0f40c47a34	-	RKG250524-1898	-	Periapikal 1	Cempaka putih	62	2024-05-25	Abses periapikal	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/radiologi/444b2330-74d2-4431-95a1-bd451217a47b.png	PERIAPIKAL	Terdapat gambaran radiopak pada mahkota gigi 25 dari email sampai pulpa	akar : akar 1\nkamar pulpa : terdapat gambaran radiopak pada kamar pulpa\nsaluran akar : terdapat gambaran radiopak saluran akar	mesial\n1/3 servikal : dalam batas normal\n1/3 tengah : menghilang\n1/3 apikal : menghilang\n\ndistal\n1/3 servikal : dalam batas normal\n1/3 tengah : menghilang\n1/3 apikal : menghilang	mesial\n1/3 servikal : dalam batas normal\n1/3 tengah : menghilang\n1/3 apikal : menghilang\n\ndistal\n1/3 servikal : dalam batas normal\n1/3 tengah : menghilang\n1/3 apikal : menghilang	tidak ada	tinggi\nmesial : dalam batas normal, distal : dalam batas normal\nbentuk\nmesial : irreguler, distal irreguler\ntulang kortikal : tidak ada\nkontinuitas : tidak ada\noutline : tidak ada\ntebal/lebar : tidak ada\ndensitas : tidak ada\ntulang kanselus (spongious)\ndensitas : padat\npola : bulat	radiodensitas lesi : radiolusen berbatas jelas dan tidak tegas\nlokasi dan perluasan lesi : 1/3 tengah akar gigi 25 meluas ke apikar akar\nbentuk dan ukuran diameter lesi : 0,98 mm\nbatas tepi : jelas dan tidak tegas\nstruktur interna lesi : radiolusen\nefek lesi terhadap jaringan sekitar : tidak ada	tinggi tulang yang ada : tidak ada\nkondisi alveolar crest : tidak ada\nruang periodontal dan lamina dura : menghilang 1/3 tengah akar\nrasio mahkota akar : 01:02	radiodensitas bahan restorasi : tidak ada\nkontur restorasi : over/undercontour : tidak ada\nkonsisi titik kontak : tidak ada\nadaptasi bahan tumpatan dengan basis tumpatan : tidak ada\nimarginal fit pada restorasi indirect : tidak ada	Diagnosis banding :\nGranuloma abses\nKista periapikal	4122023032	Ivan Hasan	drg. Resky Mustafa,M. Kes.,Sp.RKG	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	WRITE	OPEN	PERIAPIKAL	\N
 582395bb-99e6-47de-911a-64be991bf4aa	-	RKG250524-2836	-	Oklusal	Cempaka Putih	31	2024-05-25	Kista Radikuler	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/radiologi/e91f259b-d5fc-4312-8b60-8d4e13b0815d.png	OKLUSI	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023032	Ivan Hasan	drg. Alongsyah,Sp.RKG.,Subsp.R.D.P (K)	\N	\N	\N	\N	\N	\N	\N	\N	\N	Site : Terdapat gambaran radiolusen lateral superior berbatasan dengan gigi 22 dengan 21 sampai fossa nasal posterior dan gambaran radiolusen lateral superior berbatasan dengan gigi 11 dengan 12 sampai fossa nasal posterior\nSize : kurang lebih 5 cm - 3,5 cm\nShape : irreguler\nSymetri : asimetri\nJumlah : 2\nBorder : Berbatas jelas dan tegas\nContent : lesi radiolusen berbatas jelas	Diagnosis banding : Foramen insisivus dan Kista duktusnasopalatinus\n\nPerbedaan\nKista radikular : perpindahan dan resorpsi ekternal  akar gigi berdekatan jika lesi besar. ukuran >6 mm. hilangnya lamina dura.\n\nForamen insisivus : menyebabkan perpindahan akar gigi, ukuran <6 mm. Lamina dura utuh disekitar gigi 11 dan 21. \n\nKista duktus nasopalatina : perpindahan gigi berdekatan kearah distal. di antara apikal akar gigi 11 dan 21  berhubungan dengan karies luas / restorasi dalam. ukuran >6 mm. Lamina dura utuh disekitar gigi 11 dan 21. \n\nPersamaan\nKista radikular : perpindahan dan resorpsi ekternal akar gigi berdekatan jika lesi besar. Radiolusen di apeks gigi insisivus sentral RA, berbatas jelas, berbentuk bulat, Khas lokasi dekat midline anterior RA.\n\nForamen insisivus : menyebabkan perpindahan akar gigi, radiolusen di antara akar, di daerah 1/3 apikal-tengah akar gigi 11 dan 21. berbatas jelas, berbentuk bulat. Khas lokasi dekat midline anterior RA.\n\nKista duktus nasopalatina : perpindahan gigi berdekatan kearah distal. Radiolusen di apeks gigi insisivus sentral RA, berbatas jelas, berbentuk bulat. Khas lokasi dekat midline anterior RA.	WRITE	OPEN	OKLUSI	\N
 5fcdf549-caa4-4924-a2a9-0542b5c50635	-	RKG250524-1348	-	Periapikal 2	Cempaka putih	6	2024-05-25	Fusi pada gigi 81 82	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/radiologi/454e3e7e-925d-493c-a256-e00a5214c4e0.png	PERIAPIKAL	Dalam batas normal	akar : akar 2\nkamar pulpa : dalam batas normal\nsaluran akar : dalam batas normal	mesial\n1/3 servikal : menghilang\n1/3 tengah : dalam batas normal\n1/3 apikal : dalam batas normal\n\ndistal\n1/3 servikal : menghilang\n1/3 tengah : dalam batas normal\n1/3 apikal : dalam batas normal	mesial\n1/3 servikal : menghilang\n1/3 tengah : dalam batas normal\n1/3 apikal : dalam batas normal\n\ndistal\n1/3 servikal : menghilang\n1/3 tengah : dalam batas normal\n1/3 apikal : dalam batas normal	tidak ada	tinggi\nmesial : 0,34 mm, distal : 0,34 mm\nbentuk\nmesial : vertikal, distal : vertikal\ntulang kortikal : tidak ada\nkontinuitas : tidak ada\noutline : tidak ada\ntebal/lebar : tidak ada\ndensitas : tidak ada\ntulang kanselus (spongious)\ndensitas : padat\npola : bulat	radiodensitas lesi : tidak ada\nlokasi dan perluasan lesi : tidak ada\nbentuk dan ukuran diameter lesi : tidak ada\nbatas tepi : tidak ada\nstruktur interna lesi : tidak ada\nefek lesi terhadap jaringan sekitar : tidak ada	tinggi tulang yang ada : tidak ada\nkondisi alveolar crest : terdapat penurunan tulang alveolar crest secara vertikal\nruang periodontal dan lamina dura : menghilang 1/3 servikal akar\nrasio mahkota akar : 01:02	radiodensitas bahan restorasi : tidak ada\nkontur restorasi : over/undercontour : tidak ada\nkonsisi titik kontak : tidak ada\nadaptasi bahan tumpatan dengan basis tumpatan : tidak ada\nimarginal fit pada restorasi indirect : tidak ada	Gemination\nMakrodonsia	4122023032	Ivan Hasan	drg. Resky Mustafa,M. Kes.,Sp.RKG	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	WRITE	OPEN	PERIAPIKAL	\N
@@ -6784,12 +6785,13 @@ be56c015-820e-4faa-a553-c1e482809ee9	03	RKG280524-7796	RKG 2	Tn. J	Korea	21	2024
 6c621edd-171e-476c-8a14-c960bf2ca13a	04	RKG280524-8549	RKG 2	Ny. Z	Japan	24	2024-05-28	Osteoid osteoma  adalah neoplasma jinak osteoblas tanpa adanya potensi metastatis yang mirip dengan osteoblastoma.	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/radiologi/8e6130ec-f773-4227-87e4-c8f0258f2a3c.png	PANORAMIK	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023024	Adila Hikmayanti	drg. Alongsyah,Sp.RKG.,Subsp.R.D.P (K)	-	-	-	-	Overlap 16, 15, 24, 25, 26, 35, 36, dan 45	DBN	DBN	Terdapat gambaran radiolusen pada apikal gigi 47	DBN	\N	\N	WRITE	OPEN	PANORAMIK	-
 7bb39c62-3e39-45c5-95da-5c07d927f596	05	RKG280524-5367	RKG 2	Tn. SJ	Australia	12	2024-05-28	Mahkota Gigi 13 berada antara apikal gigi 11, 12, dan 14 berbatasan dengan foramen insisiv dan sutura intermaksilaris\nAkar gigi 13 overlapping pada palatal gigi 14, 15, dan 16 berbatasan dengan nasal septum\nMahkota Gigi 23 berada antara apikal gigi 21, 22, dan 24\nAkar gigi 23 overlapping dengan palatal gigi 25 sampai 26	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/radiologi/ee6b1da7-d043-42bc-a13b-2e339bb989cf.png	OKLUSI	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023024	\N	drg. Resky Mustafa,M. Kes.,Sp.RKG	\N	\N	\N	\N	\N	\N	\N	\N	\N	Kelainan lokasi gigi 13 dan 23	Bilateral maksila impacted caninus (13 dan 23) class 2	WRITE	OPEN	OKLUSI	\N
 a15b8121-841b-4a03-a67c-b2ce12d30c83	-	RKG300524-9652	-	Video oklusal	Cempaka putih	22	\N	-	\N	OKLUSI	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	4122023032	Ivan Hasan	drg. Resky Mustafa,M. Kes.,Sp.RKG	\N	\N	\N	\N	\N	\N	\N	\N	\N	-	-	WRITE	OPEN	OKLUSI	https://drive.google.com/drive/folders/1agyr5x4FdtzbkDOcJNamHwai2XHTdYl4?usp=drive_link
+69e07368-6378-49b5-a83f-cb156e07acdf	-	RKG080524-7020	-	Periapikal 1	-	0	2024-05-08	Abses Periapikal	https://rsuyarsibucket.s3.ap-southeast-1.amazonaws.com/emr/radiologi/08a88267-4d02-412e-95d2-a4eaeda0ea84.png	PERIAPIKAL	terdapat gambaran radiopak pada mahkota gigi	terdapat gambaran radiopak pada saluran akar	membran periodontal distal = 1/3 servikal : dalam batas normal, 1/3 tengah : mengihlang. 1/3 apikal : menghilang\n\nmembran periodontal mesial = 1/3 servikal : dalam batas normal, 1/3 tengah : mengihlang. 1/3 apikal : menghilang	lamina dura distal = 1/3 servikal : dalam batas normal, 1/3 tengah : menghilang, 1/3 apikal : menghilang\n\nlamina dura mesial = 1/3 servikal : dalam batas normal, 1/3 tengah : menghilang, 1/3 apikal : menghilang	tidak terdapat furkasi	dalam batas normal	terdapat gambaran radiolusen berbatas tidak jelas dan tidak tegas pada gigi 25 dari 1/3 setengah akar sampai 1/3 apikal akar	terdapat kelainan pada mahkota, akar, lamina dura, membran periodontal, periapikal	-	abses periapikal	4122023032	Ivan Hasan	drg. Resky Mustafa,M. Kes.,Sp.RKG	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	WRITE	WRITE	PERIAPIKAL	\N
 \.
 
 
 --
--- TOC entry 3722 (class 0 OID 16506)
--- Dependencies: 230
+-- TOC entry 3724 (class 0 OID 16506)
+-- Dependencies: 232
 -- Data for Name: failed_jobs; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6798,19 +6800,20 @@ COPY public.failed_jobs (id, uuid, connection, queue, payload, exception, failed
 
 
 --
--- TOC entry 3724 (class 0 OID 16513)
--- Dependencies: 232
+-- TOC entry 3726 (class 0 OID 16513)
+-- Dependencies: 234
 -- Data for Name: finalassesment_konservasis; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
 COPY public.finalassesment_konservasis (uuid, nim, name, kelompok, tumpatan_komposisi_1, tumpatan_komposisi_2, tumpatan_komposisi_3, tumpatan_komposisi_4, tumpatan_komposisi_5, totalakhir, grade, keterangan_grade, yearid, semesterid, studentid) FROM stdin;
 2d10535a-7709-45fd-8baf-76c10870c9fb	4122023034	Jessica Putri Souisa		21.6	23.75	15.6	2	0	62.95	B-		04f1c1a1-625a-4186-ac68-28e1e71c6777	c5ee4d99-e52c-4c98-9548-7cb94969607a	12a16ac8-2655-4f67-b69f-3615d5054a13
+db8958e4-b549-4534-ae09-cfbdbd320f1f	4122023043	Sahri Muhamad Risky		17.9	0	0	0	0	17.9	E		04f1c1a1-625a-4186-ac68-28e1e71c6777	c5ee4d99-e52c-4c98-9548-7cb94969607a	f95f6c6c-aeed-44d0-acd6-53e900611129
 \.
 
 
 --
--- TOC entry 3725 (class 0 OID 16519)
--- Dependencies: 233
+-- TOC entry 3727 (class 0 OID 16519)
+-- Dependencies: 235
 -- Data for Name: finalassesment_orthodonties; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6820,8 +6823,8 @@ COPY public.finalassesment_orthodonties (id, nim, name, kelompok, anamnesis, fot
 
 
 --
--- TOC entry 3726 (class 0 OID 16525)
--- Dependencies: 234
+-- TOC entry 3728 (class 0 OID 16525)
+-- Dependencies: 236
 -- Data for Name: finalassesment_periodonties; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6831,8 +6834,8 @@ b288ff18-8418-4059-815f-454115a19b29	4122023030	Faika Zahra Chairunnisa		42.69	0
 
 
 --
--- TOC entry 3727 (class 0 OID 16531)
--- Dependencies: 235
+-- TOC entry 3729 (class 0 OID 16531)
+-- Dependencies: 237
 -- Data for Name: finalassesment_prostodonties; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6841,8 +6844,8 @@ COPY public.finalassesment_prostodonties (id, nim, name, kelompok, penyajian_dis
 
 
 --
--- TOC entry 3728 (class 0 OID 16537)
--- Dependencies: 236
+-- TOC entry 3730 (class 0 OID 16537)
+-- Dependencies: 238
 -- Data for Name: finalassesment_radiologies; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6853,8 +6856,8 @@ COPY public.finalassesment_radiologies (uuid, nim, name, kelompok, videoteknikra
 
 
 --
--- TOC entry 3729 (class 0 OID 16543)
--- Dependencies: 237
+-- TOC entry 3731 (class 0 OID 16543)
+-- Dependencies: 239
 -- Data for Name: hospitals; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6865,8 +6868,8 @@ f0b4b4d1-d41e-4b65-a85a-4af1f9cd5abc	RSU YARSI	1	\N	2024-03-18 20:31:08
 
 
 --
--- TOC entry 3730 (class 0 OID 16547)
--- Dependencies: 238
+-- TOC entry 3732 (class 0 OID 16547)
+-- Dependencies: 240
 -- Data for Name: lectures; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6887,8 +6890,8 @@ c5281a78-1a04-4ba7-865e-bccc367f4844	add71909-11e5-4adb-ab6e-919444d4aab7	drg. D
 
 
 --
--- TOC entry 3731 (class 0 OID 16550)
--- Dependencies: 239
+-- TOC entry 3733 (class 0 OID 16550)
+-- Dependencies: 241
 -- Data for Name: migrations; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6917,8 +6920,8 @@ COPY public.migrations (id, migration, batch) FROM stdin;
 
 
 --
--- TOC entry 3733 (class 0 OID 16554)
--- Dependencies: 241
+-- TOC entry 3735 (class 0 OID 16554)
+-- Dependencies: 243
 -- Data for Name: password_resets; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -6927,8 +6930,8 @@ COPY public.password_resets (email, token, created_at) FROM stdin;
 
 
 --
--- TOC entry 3734 (class 0 OID 16559)
--- Dependencies: 242
+-- TOC entry 3736 (class 0 OID 16559)
+-- Dependencies: 244
 -- Data for Name: patients; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -7368,12 +7371,25 @@ OP057971-310524-0203	RJJP310524-0314	05-79-71	JESSICA PUTRI SOUISA, NN	KEPANITER
 OP073236-310524-0081	RJJP310524-0271	07-32-36	NADZWA RETHA YUSNITA, NN	KEPANITERAAN FKG	DU-37	F	2005-03-03	JL CEMPAKA INDAH NO 13	137	2024-05-31 09:06:32	Poli Gigi Spesialis Konservasi/Endodonsi	3886	drg. Dudik Winarko, Sp.KG	PERUSAHAAN	0	\N
 OP081078-310524-0029	RJJP310524-0206	08-10-78	NAZIFA AULIA SHAHLA, NN	KEPANITERAAN FKG	SQ-30	F	2006-07-14	JL. PADEMANGAN IV GG XI	137	2024-05-31 08:28:21	Poli Gigi Spesialis Konservasi/Endodonsi	3836	drg. Chaira Musytaka Sukma, Sp.KG	PERUSAHAAN	0	\N
 -	RKG310524-7044	-	Video Periapikal	KEPANITERAAN FKG	-	F	2024-05-31	Cempaka putih	10	2024-05-31 10:50:48	Poli Gigi Spesialis Radiologi	3887	drg. Alongsyah,Sp.RKG.,Subsp.R.D.P (K)	PERUSAHAAN	0	\N
+OP080917-040624-0082	RJJP040624-0368	08-09-17	AYEESHA FITRYA ADORA, AN	KEPANITERAAN FKG	VI-12	F	2019-06-06	JL. HARAPAN MULIA VI NO. 18	58	2024-06-04 10:34:33	Poli Gigi Spesialis Pedodonti	3885	drg. Indira Chairulina Dara, Sp.KGA	PERUSAHAAN	0	\N
+OP081409-040624-0030	RJJP040624-0304	08-14-09	ILHAM WAHYUDIN MALIK, TN	KEPANITERAAN FKG	GY-34	M	1996-06-25	NAGARAKASIH	59	2024-06-04 09:24:43	Poli Gigi Spesialis Periodonti	3838	drg. Yulia Rachma wijayanti, Sp.Perio,MM	PERUSAHAAN	0	\N
+OP057971-040624-0022	RJJP040624-0294	05-79-71	JESSICA PUTRI SOUISA, NN	KEPANITERAAN FKG	SQ-2	F	2002-03-08	JLN RADEN FATAH NO 03 RT : 016/003	137	2024-06-04 09:20:09	Poli Gigi Spesialis Konservasi/Endodonsi	3836	drg. Chaira Musytaka Sukma, Sp.KG	PERUSAHAAN	0	\N
+OP075572-040624-0010	RJJP040624-0282	07-55-72	ATIKA RAHMA MINABARI, NY	KEPANITERAAN FKG	VN-2	F	2000-12-18	JL CENDRAWASIH NO. 99	46	2024-06-04 09:10:08	Poli Gigi Spesialis Orthodonty	2478	drg. Vika Novia Zamri, Sp.Ort	PERUSAHAAN	0	\N
+OP052564-030624-0142	RJJP030624-0690	05-25-64	RAYYEN ALFRIAN JUNEANRO,TN	KEPANITERAAN FKG	GY-39	M	2002-06-26	JL TITIHAN 6 BLOK HF 13 NO 14	59	2024-06-03 14:14:08	Poli Gigi Spesialis Periodonti	3838	drg. Yulia Rachma wijayanti, Sp.Perio,MM	PERUSAHAAN	4	\N
+OP075646-030624-0140	RJJP030624-0688	07-56-46	SHABRINA GHISANI MARZUKI, NN	KEPANITERAAN FKG	GY-38	F	2002-06-21	JL. NEFTUNUS PRAYA BLOK  I 1 NO. 20	59	2024-06-03 14:11:26	Poli Gigi Spesialis Periodonti	3838	drg. Yulia Rachma wijayanti, Sp.Perio,MM	PERUSAHAAN	4	\N
+OP075572-030624-0139	RJJP030624-0687	07-55-72	ATIKA RAHMA MINABARI, NY	KEPANITERAAN FKG	GY-37	F	2000-12-18	JL CENDRAWASIH NO. 99	59	2024-06-03 14:09:52	Poli Gigi Spesialis Periodonti	3838	drg. Yulia Rachma wijayanti, Sp.Perio,MM	PERUSAHAAN	4	\N
+OP075731-030624-0137	RJJP030624-0685	07-57-31	CECELIA SANDRA BAYANUDIN, NY	KEPANITERAAN FKG	GY-36	F	2001-04-23	NAGARAKASIH	59	2024-06-03 14:08:43	Poli Gigi Spesialis Periodonti	3838	drg. Yulia Rachma wijayanti, Sp.Perio,MM	PERUSAHAAN	4	\N
+OP081008-030624-0135	RJJP030624-0683	08-10-08	BREANIZA DHARI, NY	KEPANITERAAN FKG	GY-35	F	2001-05-07	KOMP KODAM JAYA BLOK I NO 1	59	2024-06-03 14:07:33	Poli Gigi Spesialis Periodonti	3838	drg. Yulia Rachma wijayanti, Sp.Perio,MM	PERUSAHAAN	4	\N
+OP075644-030624-0131	RJJP030624-0679	07-56-44	ANDI ADJANI SALWA PUTRI, NN	KEPANITERAAN FKG	GY-34	F	2003-08-11	PERUM SEPINGGAN PRATAMA BLOK E1 NO. 5	59	2024-06-03 14:03:15	Poli Gigi Spesialis Periodonti	3838	drg. Yulia Rachma wijayanti, Sp.Perio,MM	PERUSAHAAN	4	\N
+OP076902-030624-0130	RJJP030624-0678	07-69-02	PUTRI AYU NURHADIZAH, NN	KEPANITERAAN FKG	GY-33	F	2002-10-04	BALIMATRAMAN NO. 6	59	2024-06-03 14:02:37	Poli Gigi Spesialis Periodonti	3838	drg. Yulia Rachma wijayanti, Sp.Perio,MM	PERUSAHAAN	4	\N
+OP075535-030624-0126	RJJP030624-0674	07-55-35	IVO RESKY PRIMIGO, NN	KEPANITERAAN FKG	GY-32	F	2001-07-21	JL. HALIMAH 	59	2024-06-03 13:57:57	Poli Gigi Spesialis Periodonti	3838	drg. Yulia Rachma wijayanti, Sp.Perio,MM	PERUSAHAAN	4	\N
+OP079930-050624-0157	RJJP050624-0329	07-99-30	WIRDAH BINTI AYUB, NY	KEPANITERAAN FKG	DU-51	F	1972-07-03	JL GALUR SELATAN 	137	2024-06-05 10:26:02	Poli Gigi Spesialis Konservasi/Endodonsi	3886	drg. Dudik Winarko, Sp.KG	PERUSAHAAN	0	\N
 \.
 
 
 --
--- TOC entry 3735 (class 0 OID 16564)
--- Dependencies: 243
+-- TOC entry 3737 (class 0 OID 16564)
+-- Dependencies: 245
 -- Data for Name: personal_access_tokens; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -7382,8 +7398,8 @@ COPY public.personal_access_tokens (id, tokenable_type, tokenable_id, name, toke
 
 
 --
--- TOC entry 3737 (class 0 OID 16570)
--- Dependencies: 245
+-- TOC entry 3739 (class 0 OID 16570)
+-- Dependencies: 247
 -- Data for Name: semesters; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -7400,8 +7416,8 @@ fc711d54-c308-4792-882c-8fef761f4594	Semester 5	5	1	\N	\N
 
 
 --
--- TOC entry 3738 (class 0 OID 16573)
--- Dependencies: 246
+-- TOC entry 3740 (class 0 OID 16573)
+-- Dependencies: 248
 -- Data for Name: specialistgroups; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -7411,8 +7427,8 @@ COPY public.specialistgroups (id, name, active, created_at, updated_at) FROM std
 
 
 --
--- TOC entry 3739 (class 0 OID 16576)
--- Dependencies: 247
+-- TOC entry 3741 (class 0 OID 16576)
+-- Dependencies: 249
 -- Data for Name: specialists; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -7427,8 +7443,8 @@ cf504bf3-803c-432c-afe1-d718824359d5	Radiologi Kedokteran Gigi	95114031-c490-49d
 
 
 --
--- TOC entry 3740 (class 0 OID 16579)
--- Dependencies: 248
+-- TOC entry 3742 (class 0 OID 16579)
+-- Dependencies: 250
 -- Data for Name: students; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -7459,8 +7475,8 @@ b395141d-d975-49e3-94b8-88447d2d0245	Breaniza Dhari	4122023028	034ea7cf-00c2-48b
 
 
 --
--- TOC entry 3741 (class 0 OID 16582)
--- Dependencies: 249
+-- TOC entry 3743 (class 0 OID 16582)
+-- Dependencies: 251
 -- Data for Name: trsassesments; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -7519,15 +7535,16 @@ f5eadc06-ef8c-4ca3-ae06-dc5f02c14c79	27dc8ac4-7abf-4a92-9c03-2ae5f60be28e	e3e743
 bff75338-d1a5-4d8f-8e40-cb13f74e0765	97e25278-15f0-4436-9413-548ddb1edac2	e3e7432f-6de7-45fd-b779-710c48a16575	b27351d9-1bf2-489a-be00-530575b27cdb	04f1c1a1-625a-4186-ac68-28e1e71c6777	c5ee4d99-e52c-4c98-9548-7cb94969607a	cf504bf3-803c-432c-afe1-d718824359d5	2024-05-16 00:00:00	0	1	1	\N	2024-05-16 11:12:15	10	100	\N	0	\N	\N	\N
 7884f9e5-09e0-4b8a-a758-0d0cfcc7a96c	36e976a1-7b53-4d82-a025-72c3de4e1ed9	e3e7432f-6de7-45fd-b779-710c48a16575	b27351d9-1bf2-489a-be00-530575b27cdb	04f1c1a1-625a-4186-ac68-28e1e71c6777	c5ee4d99-e52c-4c98-9548-7cb94969607a	cf504bf3-803c-432c-afe1-d718824359d5	2024-05-16 00:00:00	0	1	1	\N	2024-05-21 11:18:26	10	80	\N	1	2024-05-21 11:18:26	drg. Resky Mustafa,M. Kes.,Sp.RKG	\N
 8f77d45e-f0ab-4909-90c1-14d37873fe1a	2569196c-7dfd-4ab3-9845-0cc1fe7fc1e9	e3e7432f-6de7-45fd-b779-710c48a16575	b27351d9-1bf2-489a-be00-530575b27cdb	04f1c1a1-625a-4186-ac68-28e1e71c6777	c5ee4d99-e52c-4c98-9548-7cb94969607a	cf504bf3-803c-432c-afe1-d718824359d5	2024-05-16 00:00:00	0	1	1	\N	2024-05-16 11:14:44	10	80	\N	0	\N	\N	\N
-2c25d4d7-d361-42d1-bfc2-3dc7b3909c70	18ba4183-db88-4de8-af99-6dd83d9b075d	e3e7432f-6de7-45fd-b779-710c48a16575	b27351d9-1bf2-489a-be00-530575b27cdb	04f1c1a1-625a-4186-ac68-28e1e71c6777	c5ee4d99-e52c-4c98-9548-7cb94969607a	cf504bf3-803c-432c-afe1-d718824359d5	2024-05-16 00:00:00	0	1	1	\N	2024-05-21 11:35:15	10	100	\N	0	\N	\N	\N
 fd4b7500-d73b-419d-acd1-fed1046d6138	16e7fcab-101f-498c-8989-062ec832c8b8	e3e7432f-6de7-45fd-b779-710c48a16575	b27351d9-1bf2-489a-be00-530575b27cdb	04f1c1a1-625a-4186-ac68-28e1e71c6777	c5ee4d99-e52c-4c98-9548-7cb94969607a	cf504bf3-803c-432c-afe1-d718824359d5	2024-05-21 00:00:00	0	1	1	\N	2024-05-21 11:37:17	10	80	\N	0	\N	\N	\N
-4962d0eb-eb2f-4205-ba63-fceaffdf21be	27dc8ac4-7abf-4a92-9c03-2ae5f60be28e	29b9777c-1cc5-4839-82b3-935db28cb9a8	a8a87927-17f3-44fc-9867-0acf2cf0881a	04f1c1a1-625a-4186-ac68-28e1e71c6777	c5ee4d99-e52c-4c98-9548-7cb94969607a	cf504bf3-803c-432c-afe1-d718824359d5	2024-05-22 00:00:00	0	1	1	\N	2024-05-22 13:18:33	10	100	\N	0	\N	\N	\N
+2c25d4d7-d361-42d1-bfc2-3dc7b3909c70	18ba4183-db88-4de8-af99-6dd83d9b075d	e3e7432f-6de7-45fd-b779-710c48a16575	b27351d9-1bf2-489a-be00-530575b27cdb	04f1c1a1-625a-4186-ac68-28e1e71c6777	c5ee4d99-e52c-4c98-9548-7cb94969607a	cf504bf3-803c-432c-afe1-d718824359d5	2024-05-16 00:00:00	0	1	1	\N	2024-06-04 09:23:54	10	100	\N	0	\N	\N	\N
+c582a7af-22dd-45af-9719-e3db1b333440	c844e587-0cff-487a-a81f-b5406215a1e8	f95f6c6c-aeed-44d0-acd6-53e900611129	0aad813b-77f2-409b-9fbc-2dc465e5f909	04f1c1a1-625a-4186-ac68-28e1e71c6777	c5ee4d99-e52c-4c98-9548-7cb94969607a	add71909-11e5-4adb-ab6e-919444d4aab7	2024-06-04 00:00:00	179	4	1	\N	2024-06-04 11:29:29	137	100	17.9	1	2024-06-04 11:18:32	drg. Chaira Musytaka Sukma, Sp.KG	\N
+4962d0eb-eb2f-4205-ba63-fceaffdf21be	27dc8ac4-7abf-4a92-9c03-2ae5f60be28e	29b9777c-1cc5-4839-82b3-935db28cb9a8	a8a87927-17f3-44fc-9867-0acf2cf0881a	04f1c1a1-625a-4186-ac68-28e1e71c6777	c5ee4d99-e52c-4c98-9548-7cb94969607a	cf504bf3-803c-432c-afe1-d718824359d5	2024-05-22 00:00:00	0	1	1	\N	2024-06-14 10:14:09	10	100	\N	0	\N	\N	\N
 \.
 
 
 --
--- TOC entry 3743 (class 0 OID 16599)
--- Dependencies: 252
+-- TOC entry 3745 (class 0 OID 16599)
+-- Dependencies: 254
 -- Data for Name: type_five_trsdetailassesments; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -7591,8 +7608,8 @@ f00b58de-617c-42e1-9be6-91e3b3d1ca48	b34da4ce-b23a-449e-ad96-f2b738cbca7c	e63c67
 
 
 --
--- TOC entry 3744 (class 0 OID 16609)
--- Dependencies: 254
+-- TOC entry 3746 (class 0 OID 16609)
+-- Dependencies: 256
 -- Data for Name: type_four_trsdetailassesments; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -7742,12 +7759,26 @@ de23a1b3-1135-4e92-b4ee-d86ab43ecd5c	aa81ee4d-ad8f-42f1-ae71-cf3d5e6b8eb4	4f94a4
 daa0f27e-b41e-4685-9eb5-4ac57c275c45	aa81ee4d-ad8f-42f1-ae71-cf3d5e6b8eb4	db7ffddf-f314-438e-883c-8d5a9da822b9	Sopan santun	\N	20	0	1	\N	\N	0	0
 2658e049-dd7e-4a71-a0b9-9f6aee824a97	aa81ee4d-ad8f-42f1-ae71-cf3d5e6b8eb4	0e3b0bb3-55a8-452c-9d82-b6d1482aaa8d	Indikasi	\N	\N	6	1	\N	2024-04-20 20:24:20	6	0
 e9c2122d-8916-488a-8ccf-78c0397d46b9	aa81ee4d-ad8f-42f1-ae71-cf3d5e6b8eb4	5b359e63-25fc-4d41-b0bc-09007cc5048b	Pekerjaan	\N	0	6	1	\N	2024-04-20 20:24:20	0	1
+a33144c8-752c-42a9-90b7-5399329e7ab7	c582a7af-22dd-45af-9719-e3db1b333440	e7e3952b-2882-4ee0-99e1-dca0afebed48	Liner, Etsa dan Bonding	\N	40	0	1	\N	\N	0	0
+8f6074cf-fa67-425a-a184-d2f0fb353ec8	c582a7af-22dd-45af-9719-e3db1b333440	b01d7ab9-48c0-42d6-a73a-3e89e1700662	Indikasi	\N	\N	9	1	\N	2024-06-04 11:14:23	9	0
+573309f1-f897-4093-ab69-89ab2fd62126	c582a7af-22dd-45af-9719-e3db1b333440	762e0417-2ced-46e2-bd01-9b28f1b91231	Penumpatan komposit	\N	\N	36	1	\N	2024-06-04 11:15:21	36	0
+30b7d3ad-a73f-425c-90e5-076a9f99b93a	c582a7af-22dd-45af-9719-e3db1b333440	a88aa365-5367-43b7-b8b2-6cc50ddd19fd	Preparasi	\N	\N	18	1	\N	2024-06-04 11:15:33	18	0
+9d038a1b-8585-45c3-85c5-57c5d86b1e4d	c582a7af-22dd-45af-9719-e3db1b333440	e1e03caa-1b2e-4a2d-a3b2-0cd8ffb42915	Isolasi daerah kerja	\N	\N	9	1	\N	2024-06-04 11:15:59	9	0
+e299f04f-2459-4b21-a2b0-1f27d1edaf51	c582a7af-22dd-45af-9719-e3db1b333440	78a9dc27-194e-4bae-8756-baa5159c785d	Finishing dan polishing	\N	\N	8	1	\N	2024-06-04 11:16:10	8	0
+698eeec6-c8c0-48fd-a93b-d2152abb0fe4	c582a7af-22dd-45af-9719-e3db1b333440	de8a1a07-d720-4ad7-bf42-846cf4eb3ac8	Kontrol	\N	\N	9	1	\N	2024-06-04 11:16:24	9	0
+6baf4c31-ef26-4a17-b78d-d823ad5bc1fe	c582a7af-22dd-45af-9719-e3db1b333440	636d8493-7327-46bd-b9f2-9c8b8b30e3b7	Pekerjaan	\N	0	89	1	\N	2024-06-04 11:16:24	0	1
+656ca2a3-b328-4fd0-b479-3f22c18fc77e	c582a7af-22dd-45af-9719-e3db1b333440	374fc9f3-503e-4558-ba94-7f2688a5e7a8	Disiplin	\N	\N	18	1	\N	2024-06-04 11:17:12	18	0
+2de7c562-128b-4928-98e0-92e5675776e4	c582a7af-22dd-45af-9719-e3db1b333440	b43c94c8-3ec1-43fc-a443-906ceee457d2	Kejujuran	\N	\N	18	1	\N	2024-06-04 11:17:20	18	0
+97011113-c50f-41ff-8bfb-399167b668f3	c582a7af-22dd-45af-9719-e3db1b333440	ea32d02d-5aa2-49ff-80e5-be78ae9eb218	Tanggung jawab	\N	\N	18	1	\N	2024-06-04 11:17:33	18	0
+0d04ac1a-7a4f-4760-942c-0474604f5b21	c582a7af-22dd-45af-9719-e3db1b333440	e3d23c0f-6f02-43e0-8b8e-cdc3b222f425	Sopan santun	\N	\N	18	1	\N	2024-06-04 11:17:42	18	0
+f91b725c-ef15-48bc-8b78-bb1a285c0b30	c582a7af-22dd-45af-9719-e3db1b333440	0d802a0f-26a5-468a-9372-4d48e59dfc41	Inisiatif dan komunikasi	\N	\N	18	1	\N	2024-06-04 11:18:09	18	0
+6234085d-d38b-409c-a0f7-a82563250974	c582a7af-22dd-45af-9719-e3db1b333440	208de0d0-2f2f-489c-8009-a4f64b98d76f	Sikap	\N	0	90	1	\N	2024-06-04 11:18:09	0	2
 \.
 
 
 --
--- TOC entry 3742 (class 0 OID 16589)
--- Dependencies: 250
+-- TOC entry 3744 (class 0 OID 16589)
+-- Dependencies: 252
 -- Data for Name: type_one_control_trsdetailassesments; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -7760,8 +7791,8 @@ b696ba7d-c45a-4c20-9d29-b845f76417db	cbc76149-33b7-4b54-a4ef-ca0576195864	74a809
 
 
 --
--- TOC entry 3745 (class 0 OID 16619)
--- Dependencies: 256
+-- TOC entry 3747 (class 0 OID 16619)
+-- Dependencies: 258
 -- Data for Name: type_one_trsdetailassesments; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -8336,8 +8367,8 @@ e2228fbe-d317-4697-91bd-a8e5debc91df	4962d0eb-eb2f-4205-ba63-fceaffdf21be	24d7d7
 
 
 --
--- TOC entry 3746 (class 0 OID 16629)
--- Dependencies: 258
+-- TOC entry 3748 (class 0 OID 16629)
+-- Dependencies: 260
 -- Data for Name: type_three_trsdetailassesments; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -8374,8 +8405,8 @@ c8276a4b-99d9-4e80-af06-29b7a4a18c5a	27f5b271-b7f7-4681-b30b-c287484294cc	c9c52d
 
 
 --
--- TOC entry 3747 (class 0 OID 16639)
--- Dependencies: 260
+-- TOC entry 3749 (class 0 OID 16639)
+-- Dependencies: 262
 -- Data for Name: universities; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -8385,8 +8416,8 @@ COPY public.universities (id, name, active, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 3748 (class 0 OID 16643)
--- Dependencies: 261
+-- TOC entry 3750 (class 0 OID 16643)
+-- Dependencies: 263
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -8408,36 +8439,36 @@ f67ddfa7-4ca9-44db-8c41-ca5d6717ad77	Hasbi	admin	hasbi	eyJ0eXAiOiJKV1QiLCJhbGciO
 989e053a-baf7-44f3-9fda-93cb97712b75	drg. Selli Reviona	dosen	D014	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxMTUyMzI4NCwiZXhwIjoxNzExODgzMjg0LCJuYmYiOjE3MTE1MjMyODQsImp0aSI6IkExVVFYZTJJVzdoTWZHeFEiLCJzdWIiOiI5ODllMDUzYS1iYWY3LTQ0ZjMtOWZkYS05M2NiOTc3MTJiNzUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.KyzAXiskjkqhnuO_CvxMvB83_ANg1BW-zzOdcC4mn6o	2024-03-27 14:09:04	-	\N	$2y$10$9Vo6JZzZJ7t4HPalHNDc7OGOTfmtwBvYx052Uu/BJ2qZlbARUN/t6	\N	2024-03-20 15:09:31	2024-03-20 15:09:31
 0c9893da-d125-4d29-b8e8-18718fa6a9fb	drg. Dudik Winarko, Sp.KG	dosen	DY285	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxMjEyNTEwNCwiZXhwIjoxNzEyNDg1MTA0LCJuYmYiOjE3MTIxMjUxMDQsImp0aSI6IllKZ2l4QzRheGM3aG5rT1AiLCJzdWIiOiIwYzk4OTNkYS1kMTI1LTRkMjktYjhlOC0xODcxOGZhNmE5ZmIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.yLHU2wW7A2XJCDlctiGJmC7JEmgD_jwu5AVrOLZQJ5Y	2024-04-03 13:19:24	-	\N	$2y$10$JZpB7mUt2uKC3KbGfFPvzeM2tElcZ2UAMf1iqXwOFIfMqR0Woauji	\N	2024-03-20 15:18:29	2024-03-20 15:18:29
 cff74bde-29d1-4cfd-9751-35c748a5b1e6	drg. Bimo Rintoko, Sp.Pros	dosen	DY233	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxMjE5NDE5NSwiZXhwIjoxNzEyNTU0MTk1LCJuYmYiOjE3MTIxOTQxOTUsImp0aSI6IjgxU1JXVEFSM3lCdFlvOWQiLCJzdWIiOiJjZmY3NGJkZS0yOWQxLTRjZmQtOTc1MS0zNWM3NDhhNWIxZTYiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XdFrzXCGBqQSXsSQcDo1Cihu4GqCCQQB4AFnMSk8xlw	2024-04-04 08:30:55	-	\N	$2y$10$McoPHzh1DlBB08hM4pIBouhZNv3HXnfNcMAGUiQq6Nx22acz0fe7W	\N	2024-03-20 15:13:12	2024-03-20 15:13:12
-c07c239d-db89-45b0-8cc5-53c279b1ccd3	drg. Resky Mustafa,M. Kes.,Sp.RKG	dosen	DY296	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjg2ODA1OCwiZXhwIjoxNzE3MjI4MDU4LCJuYmYiOjE3MTY4NjgwNTgsImp0aSI6ImZmQUNmaW5HZjBWdlIyeVEiLCJzdWIiOiJjMDdjMjM5ZC1kYjg5LTQ1YjAtOGNjNS01M2MyNzliMWNjZDMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.lQvkKM0_acpNITMdQmFNwCLGlYiahvkjSruuNNMDCOs	2024-05-28 10:48:38	-	\N	$2y$10$sGceSy8Xd.xwAqmtVDK8ZufVxDJn6XPimNlgYtVI.6j9qRCes.RAS	\N	2024-03-20 15:14:44	2024-03-20 15:14:44
 cae2450a-d89a-4023-bcad-96ee8a112541	Faika Zahra Chairunnisa	mahasiswa	4122023030	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjc5MTIzNSwiZXhwIjoxNzE3MTUxMjM1LCJuYmYiOjE3MTY3OTEyMzUsImp0aSI6IlQ1UlVxZE41Wlg1WFh3UEsiLCJzdWIiOiJjYWUyNDUwYS1kODlhLTQwMjMtYmNhZC05NmVlOGExMTI1NDEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.nDdgy_Fd0MkfnjCdT8Pb3GpPAu3URyezAfMImFpwWzw	2024-05-27 13:28:15	-	\N	$2y$10$6b4MwKNy1ZAFmnyi4bk3BuenEWVTw5.DA4UXT3Vs3xeAOG6mxtMp2	\N	2024-03-27 10:36:04	2024-03-27 10:36:04
 e3cb0f53-6961-4660-8557-91b49f22e23e	BADER	admin	badrul	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNTE1ODk5MywiZXhwIjoxNzE1NTE4OTkzLCJuYmYiOjE3MTUxNTg5OTMsImp0aSI6IlBUd2kzQ2JyZHduWFM5YnMiLCJzdWIiOiJlM2NiMGY1My02OTYxLTQ2NjAtODU1Ny05MWI0OWYyMmUyM2UiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.HIOpZheB00oQVKxE--HaPi-p2eAFm1HdamZ-LWaIavw	2024-05-08 16:04:13	badrul@gmail.com	\N	$2y$10$trYEwbxMaT8Eh3VkJT6oUexc0G7wM4yVZLwpUIl0cLu6jLyZhVQmq	\N	2024-02-15 07:08:54	2024-02-20 19:46:29
 22ef5c7c-acdd-4f28-8a1b-763a1798b3f0	Adila Hikmayanti	mahasiswa	4122023024	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjg5MTQ0NiwiZXhwIjoxNzE3MjUxNDQ2LCJuYmYiOjE3MTY4OTE0NDYsImp0aSI6IlgwTmNKZnRjSzdRT3NucDkiLCJzdWIiOiIyMmVmNWM3Yy1hY2RkLTRmMjgtOGExYi03NjNhMTc5OGIzZjAiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.2yAxHGkU32QNf-XkibQCx7bayd-1KinMxTxIkUdejjk	2024-05-28 17:18:26	-	\N	$2y$10$y32BbK9nf55DR.Wtc2dFi.AzT8vovQf8SyA5goO4P6pmGuUvCrENW	\N	2024-03-20 14:53:28	2024-03-20 14:53:28
-4c84cd06-7dc9-4d17-a868-6c1513bd3150	drg. Yulia Rachma wijayanti, Sp.Perio,MM	dosen	DY177	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjY2MjA0OCwiZXhwIjoxNzE3MDIyMDQ4LCJuYmYiOjE3MTY2NjIwNDgsImp0aSI6ImwxdEFKWmxpTXh2SkdPeFkiLCJzdWIiOiI0Yzg0Y2QwNi03ZGM5LTRkMTctYTg2OC02YzE1MTNiZDMxNTAiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.kYqGir0GApwjPZG6E9a4_2gy_0mFVlcj2iCS-zZW5Q4	2024-05-26 01:35:08	-	\N	$2y$10$qM/cZvQDr/V.QijEhb8MlOQicstL9RaMyjdY0/qTpgIHo93j6gOMq	\N	2024-03-20 15:12:30	2024-03-20 15:12:30
 a714cbf5-bcfd-4bf6-a62b-0ef96c7b6506	Farah Alifah Rahayu	mahasiswa	4122023031	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjc3NDIyMywiZXhwIjoxNzE3MTM0MjIzLCJuYmYiOjE3MTY3NzQyMjMsImp0aSI6Ind3YkFTbkRYMEFHQUpzNkEiLCJzdWIiOiJhNzE0Y2JmNS1iY2ZkLTRiZjYtYTYyYi0wZWY5NmM3YjY1MDYiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.rxQWdluGz9cMMCQeQQTt9qbSgjiGFw8JyGefwtAARfU	2024-05-27 08:44:43	-	\N	$2y$10$19LKY9aSvNHIPZtKCLTyqeJmOmmZcnK/l.WbG9tsVA2W2.AiHzMUq	\N	2024-03-27 10:36:42	2024-03-27 10:36:42
-ae9de2a9-0ff7-45e5-8620-bacdf683f8c4	drg. Anugrah Prayudi Raharjo	dosen	D015	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjc4MDUyOSwiZXhwIjoxNzE3MTQwNTI5LCJuYmYiOjE3MTY3ODA1MjksImp0aSI6Ikx3OUloQ1FXck50MUNDWTciLCJzdWIiOiJhZTlkZTJhOS0wZmY3LTQ1ZTUtODYyMC1iYWNkZjY4M2Y4YzQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.5N-2OejISXmz_pfwH0KH3OM_daGyvG057t65QnpLyB8	2024-05-27 10:29:49	-	\N	$2y$10$aiLjpTcCc8Hu9Me..18zx.t/6Rhyg3vUV//LraqoL19M0VX0sDvIa	\N	2024-03-20 15:08:58	2024-03-20 15:08:58
-57959057-06f2-44b2-82d6-1163502839a5	Mutia Permata Putri	mahasiswa	4122023039	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjg2MDg2MiwiZXhwIjoxNzE3MjIwODYyLCJuYmYiOjE3MTY4NjA4NjIsImp0aSI6IlpCWlZENFM4TmlEV3R3WEUiLCJzdWIiOiI1Nzk1OTA1Ny0wNmYyLTQ0YjItODJkNi0xMTYzNTAyODM5YTUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.YM7nIHrJ3kiJvrY7vuUNXYJ4fFoYjz6tlJAjLdAinYM	2024-05-28 08:48:42	-	\N	$2y$10$UMelWTYKxpcC.IY8Uj7i1O28uxTFmS9h9r1hCHZleXOspM7sA92ci	\N	2024-03-20 14:50:36	2024-03-20 14:50:36
-9924710b-b664-45cd-93a6-17a7f2ecfbd4	Jessica Putri Souisa	mahasiswa	4122023034	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjk3MTg4NCwiZXhwIjoxNzE3MzMxODg0LCJuYmYiOjE3MTY5NzE4ODQsImp0aSI6Ilp6WHY4VjNvNDJPQ2xyNlEiLCJzdWIiOiI5OTI0NzEwYi1iNjY0LTQ1Y2QtOTNhNi0xN2E3ZjJlY2ZiZDQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.YT35UmybuM2U3JvuxT7Vs_kO2vZxG52fhhsBQl_bcIM	2024-05-29 15:39:04	-	\N	$2y$10$Q/LX/cQiMt6vN4ov/G3JTOvTNcOoIm1K.ZZ/XdtqCABvnOp9T7FNy	\N	2024-03-20 14:51:50	2024-03-20 14:51:50
 329b2055-838a-4723-89a6-5d7525ce5971	Atika Rahma Minabari	mahasiswa	4122023027	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjgwMjM4NywiZXhwIjoxNzE3MTYyMzg3LCJuYmYiOjE3MTY4MDIzODcsImp0aSI6IktPelByY0JrOERFeENGNUUiLCJzdWIiOiIzMjliMjA1NS04MzhhLTQ3MjMtODlhNi01ZDc1MjVjZTU5NzEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.X5onyXJ1HQ-kmHkwuLuQln71sSM_TraCFmqb-ik4CBw	2024-05-27 16:34:07	-	\N	$2y$10$fp3/roLjT4DFUXgXwDHo7esxfjnx9EL0vHRcG4NRF5BEMDPJhPMBC	\N	2024-03-27 10:32:38	2024-03-27 10:32:38
-631faa02-92f7-48c5-b7bb-0da0eee4093c	drg. Indira Chairulina Dara, Sp.KGA	dosen	DY284	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNzIxNTI0NCwiZXhwIjoxNzE3NTc1MjQ0LCJuYmYiOjE3MTcyMTUyNDQsImp0aSI6IjZDSXppdDlPcTVIb1JRaGIiLCJzdWIiOiI2MzFmYWEwMi05MmY3LTQ4YzUtYjdiYi0wZGEwZWVlNDA5M2MiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.KqhObz3WVkOql9LRCObz6jMfxLrF6T4d_j7B0oAKFOs	2024-06-01 11:15:04	-	\N	$2y$10$X6saL0qLszE95P99r9g.0uHuBROTu1SsSK2Vs9wofCRpNz43rRxxC	\N	2024-03-20 15:19:09	2024-03-20 15:19:09
 08106bcf-46ac-49c6-99e9-274b3530f2b9	drg. Alongsyah,Sp.RKG.,Subsp.R.D.P (K)	dosen	DY287	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjc3OTMyMCwiZXhwIjoxNzE3MTM5MzIwLCJuYmYiOjE3MTY3NzkzMjAsImp0aSI6IkVYckRCS0l6WVBDVXRqcmYiLCJzdWIiOiIwODEwNmJjZi00NmFjLTQ5YzYtOTllOS0yNzRiMzUzMGYyYjkiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.6zIVTYGKD05lLU7X8Ss7KRUnWw3sN-v1392htz8_des	2024-05-27 10:09:40	-	\N	$2y$10$wV3QpPRcTbt2.D1qDfnyS.oXKbraGmg63xqfuyn0H8XUBQcs31vBW	\N	2024-03-20 15:13:57	2024-03-20 15:13:57
-c051b700-37b8-47bd-9a96-0f1aaa973ff2	drg. Ufo Pramigi	dosen	DY169	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjM1NzMwNiwiZXhwIjoxNzE2NzE3MzA2LCJuYmYiOjE3MTYzNTczMDYsImp0aSI6InEzc1h1aE9kZGVtUUdFWkQiLCJzdWIiOiJjMDUxYjcwMC0zN2I4LTQ3YmQtOWE5Ni0wZjFhYWE5NzNmZjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Vh8JLNdegSS4o0j92RCcgm7h3CWN5nAUsSx7W52HndI	2024-05-22 12:56:06	-	\N	$2y$10$rEr6UuoNACwslvkXiuCetuupBsgccLC6iOm.E.C1wpcmM1YB7essu	\N	2024-03-20 15:11:24	2024-03-20 15:11:24
+ae9de2a9-0ff7-45e5-8620-bacdf683f8c4	drg. Anugrah Prayudi Raharjo	dosen	D015	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxODc3NzcwNSwiZXhwIjoxNzE5MTM3NzA1LCJuYmYiOjE3MTg3Nzc3MDUsImp0aSI6IldlbVk4Y0w5bllST2VjNVMiLCJzdWIiOiJhZTlkZTJhOS0wZmY3LTQ1ZTUtODYyMC1iYWNkZjY4M2Y4YzQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.z3XTGztUwHsGamyQ3l6HtwhXiyPsbdio9j1XbspyC_4	2024-06-19 13:16:05	-	\N	$2y$10$aiLjpTcCc8Hu9Me..18zx.t/6Rhyg3vUV//LraqoL19M0VX0sDvIa	\N	2024-03-20 15:08:58	2024-03-20 15:08:58
+631faa02-92f7-48c5-b7bb-0da0eee4093c	drg. Indira Chairulina Dara, Sp.KGA	dosen	DY284	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNzcyNTUzOSwiZXhwIjoxNzE4MDg1NTM5LCJuYmYiOjE3MTc3MjU1MzksImp0aSI6InY5VXEzbnRBUlFRRDB0M2MiLCJzdWIiOiI2MzFmYWEwMi05MmY3LTQ4YzUtYjdiYi0wZGEwZWVlNDA5M2MiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.dFABijMUaYbZUg___0YqwVG3CW04i2qxOnGEdfYfiXQ	2024-06-07 08:59:59	-	\N	$2y$10$X6saL0qLszE95P99r9g.0uHuBROTu1SsSK2Vs9wofCRpNz43rRxxC	\N	2024-03-20 15:19:09	2024-03-20 15:19:09
+4c84cd06-7dc9-4d17-a868-6c1513bd3150	drg. Yulia Rachma wijayanti, Sp.Perio,MM	dosen	DY177	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNzU2NzY3OCwiZXhwIjoxNzE3OTI3Njc4LCJuYmYiOjE3MTc1Njc2NzgsImp0aSI6InBqS0o3SjdRa1d5QmdsZUMiLCJzdWIiOiI0Yzg0Y2QwNi03ZGM5LTRkMTctYTg2OC02YzE1MTNiZDMxNTAiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.wxDnSEaH810FyPbh6j2_F651K33PnbU74-muLUzcGoY	2024-06-05 13:08:58	-	\N	$2y$10$qM/cZvQDr/V.QijEhb8MlOQicstL9RaMyjdY0/qTpgIHo93j6gOMq	\N	2024-03-20 15:12:30	2024-03-20 15:12:30
+c07c239d-db89-45b0-8cc5-53c279b1ccd3	drg. Resky Mustafa,M. Kes.,Sp.RKG	dosen	DY296	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxODA4Mjc3OCwiZXhwIjoxNzE4NDQyNzc4LCJuYmYiOjE3MTgwODI3NzgsImp0aSI6IlU4Mk1Bc1NmcDlabU9CM2wiLCJzdWIiOiJjMDdjMjM5ZC1kYjg5LTQ1YjAtOGNjNS01M2MyNzliMWNjZDMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.JU-_CJi28SYs2Lsvy_uAjaylBCr-_CK4ij-XhspAGjc	2024-06-11 12:13:58	-	\N	$2y$10$sGceSy8Xd.xwAqmtVDK8ZufVxDJn6XPimNlgYtVI.6j9qRCes.RAS	\N	2024-03-20 15:14:44	2024-03-20 15:14:44
+9924710b-b664-45cd-93a6-17a7f2ecfbd4	Jessica Putri Souisa	mahasiswa	4122023034	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxODMzMjc1NSwiZXhwIjoxNzE4NjkyNzU1LCJuYmYiOjE3MTgzMzI3NTUsImp0aSI6Ijczak9HellyQlcxY09zSG4iLCJzdWIiOiI5OTI0NzEwYi1iNjY0LTQ1Y2QtOTNhNi0xN2E3ZjJlY2ZiZDQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.zp5p-Ylu8hEwvyAAvhJYIXqYI8FZ_7582Kk_JY81DGQ	2024-06-14 09:40:15	-	\N	$2y$10$Q/LX/cQiMt6vN4ov/G3JTOvTNcOoIm1K.ZZ/XdtqCABvnOp9T7FNy	\N	2024-03-20 14:51:50	2024-03-20 14:51:50
 cdbff537-68f2-4976-b22a-5681e6a0e321	Khairunnisa Nabiilah Putri	mahasiswa	4122023037	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjc4NTczMywiZXhwIjoxNzE3MTQ1NzMzLCJuYmYiOjE3MTY3ODU3MzMsImp0aSI6IktrMFFzZDVaS1VleENrR1oiLCJzdWIiOiJjZGJmZjUzNy02OGYyLTQ5NzYtYjIyYS01NjgxZTZhMGUzMjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.eo9sYl7J1bvK0mGHWBgmaMYA4l-BDgk2p-Rwj7Vymvc	2024-05-27 11:56:33	-	\N	$2y$10$DdkIklHIUUrjz7JMCUm89.hGOLejEPqsYRfo.ggkAG0F.6Lutq2d2	\N	2024-03-27 10:39:13	2024-03-27 10:39:13
-14ac4b79-661e-4825-8415-16d085fe4095	Administrator	admin	admin	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjk1Njc2NiwiZXhwIjoxNzE3MzE2NzY2LCJuYmYiOjE3MTY5NTY3NjYsImp0aSI6IlpZQ3hpQ1FycUV5TjdJbm8iLCJzdWIiOiIxNGFjNGI3OS02NjFlLTQ4MjUtODQxNS0xNmQwODVmZTQwOTUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.zslM5_8Ipv0kOOSdZjY_aN6PFO0q_jyZDVOLNa5vvgI	2024-05-29 11:27:06	admin@email.com	\N	$2y$10$QyVO7BkaYssdBQ96Oz/5sui4ZSgZpBrQaF3Xa8L0GWqlgfOL6CEt.	\N	2024-02-10 05:26:01	2024-02-21 19:46:03
 c700bf63-087a-4dee-b9e7-712288aef5b8	Amalia Rafa Wulandari	mahasiswa	4122023025	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjc3MTM0MiwiZXhwIjoxNzE3MTMxMzQyLCJuYmYiOjE3MTY3NzEzNDIsImp0aSI6IkNiQVZab3Z1N2IwWlo4MEsiLCJzdWIiOiJjNzAwYmY2My0wODdhLTRkZWUtYjllNy03MTIyODhhZWY1YjgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.7IpXZ7VJmdZp9YPbil-U2FUeJnZDyIHto64OQqslRR8	2024-05-27 07:56:42	-	\N	$2y$10$AxRR8acI1l97CgGSScVCXOiUu0Wy2RXzEy7HK07uh1j7VLnFLNh06	\N	2024-03-20 14:51:15	2024-03-20 14:51:15
-91d5595c-982d-4b20-99e8-4b4fc96b56f1	drg. Chaira Musytaka Sukma, Sp.KG	dosen	DY172	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjg3NTYyNCwiZXhwIjoxNzE3MjM1NjI0LCJuYmYiOjE3MTY4NzU2MjQsImp0aSI6IjIwMjB3UkhFdHMzZmUwTjciLCJzdWIiOiI5MWQ1NTk1Yy05ODJkLTRiMjAtOTllOC00YjRmYzk2YjU2ZjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.NVt8Hnv168G7BEjabzMugKn1tiTQVyAurwO4ZwkxGbc	2024-05-28 12:54:44	-	\N	$2y$10$LxF/.GxgV8q6xeWn64nh7.GDEOrJFmA1EE.OZydu3iRHS0R4N9JGC	\N	2024-03-20 15:18:05	2024-03-20 15:18:05
 3963be48-b56c-4bbb-951d-7380129e4666	Sahri Muhamad Risky	mahasiswa	4122023043	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjc4Mzk5NywiZXhwIjoxNzE3MTQzOTk3LCJuYmYiOjE3MTY3ODM5OTcsImp0aSI6IlRKRG04YTRSSXFVWVdiMGIiLCJzdWIiOiIzOTYzYmU0OC1iNTZjLTRiYmItOTUxZC03MzgwMTI5ZTQ2NjYiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.7zmlr3ZE1WwQBNILBMCUiIelsPwsHpoySJ209Oe_nF8	2024-05-27 11:27:37	-	\N	$2y$10$E90IputAhlxK3A7WU88Nd.Tflhl4qlvF22mHwr90cm2tUKz93Ivym	\N	2024-03-20 15:00:02	2024-03-20 15:00:02
 02f81681-1b79-4ebc-8343-63497cae2513	Shabrina Ghisani M	mahasiswa	4122023045	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjg1NzIxMywiZXhwIjoxNzE3MjE3MjEzLCJuYmYiOjE3MTY4NTcyMTMsImp0aSI6InBUN0lpWm5IWFJjNE1JMmUiLCJzdWIiOiIwMmY4MTY4MS0xYjc5LTRlYmMtODM0My02MzQ5N2NhZTI1MTMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.7A2gRY5HqPbemkHwfyfczPNver4-G3Yjsdgo0lCLQi8	2024-05-28 07:47:53	-	\N	$2y$10$9uRwbSsrgV21i.YDeP8nLOaERUQB8rXgfjVp1iHnPdu1JCEtOQEEu	\N	2024-03-20 14:59:20	2024-03-20 14:59:20
-d2e5c81f-42ab-445a-8cd8-f8be8063a9c4	Qanita Regina Maharani	mahasiswa	4122023041	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjg2MjkxNiwiZXhwIjoxNzE3MjIyOTE2LCJuYmYiOjE3MTY4NjI5MTYsImp0aSI6ImJFM1JFSlplTnRudDZJeWciLCJzdWIiOiJkMmU1YzgxZi00MmFiLTQ0NWEtOGNkOC1mOGJlODA2M2E5YzQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.qFs1Ek2-dYiGdAP2QMK0yK4ZYvV61betcVtLSXobkYs	2024-05-28 09:22:56	-	\N	$2y$10$Xi11KFlLIaRydI3V7m.UJeZanQT5DcNGhY1YrrnM3EirgfhJVXnFq	\N	2024-03-20 14:53:04	2024-03-20 14:53:04
 aa995a2d-badd-4642-91f9-52a8d0ff6588	Rayyen Alfian Juneanro	mahasiswa	4122023042	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjg2MDU3NiwiZXhwIjoxNzE3MjIwNTc2LCJuYmYiOjE3MTY4NjA1NzYsImp0aSI6IlNvR09FNXREaTZDYlN3NmsiLCJzdWIiOiJhYTk5NWEyZC1iYWRkLTQ2NDItOTFmOS01MmE4ZDBmZjY1ODgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.lPlsXzUAAo91Pr1IFQQw_FCbvDDEUdhmZMipv8YM7IQ	2024-05-28 08:43:56	-	\N	$2y$10$LGkm1FEYccDJulOGDJ9PKOsPgXLiIhcx8bAiZEBuP0QZ1gcZBKj6W	\N	2024-03-20 14:56:39	2024-03-20 14:56:39
 8f4ad3cf-5f05-4331-ac61-757e6b09c691	Sekar Decita Ananda Iswanti	mahasiswa	4122023044	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjg3NTg0MCwiZXhwIjoxNzE3MjM1ODQwLCJuYmYiOjE3MTY4NzU4NDAsImp0aSI6IlQ1Yk16R2FhSVJabzNCRjIiLCJzdWIiOiI4ZjRhZDNjZi01ZjA1LTQzMzEtYWM2MS03NTdlNmIwOWM2OTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Axcw_P9RMp2-SHqttSetn3guJ1PygShwXBH8KtshQwc	2024-05-28 12:58:20	-	\N	$2y$10$oQGFsi2Ihp3u391mWJaiqO1LDP5cRqlVarrOtQrKPZelr8Fh7bRca	\N	2024-03-27 10:41:35	2024-03-27 10:41:35
 59422b10-8245-4165-bbaf-739a48d7b33b	Breaniza Dhari	mahasiswa	4122023028	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNjg2MDY3MywiZXhwIjoxNzE3MjIwNjczLCJuYmYiOjE3MTY4NjA2NzMsImp0aSI6InpRUGxWbHBVQmE4Z0lkVEEiLCJzdWIiOiI1OTQyMmIxMC04MjQ1LTQxNjUtYmJhZi03MzlhNDhkN2IzM2IiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.YnrDL6GRsY7lAb7w-30wDsYW-mZs1P63i9nQLhbGuh8	2024-05-28 08:45:33	-	\N	$2y$10$VefslIuC4hf1ysMxTSZoee/946Hnm6xLaUwwoEWeZR6Y0OC.9VhLe	\N	2024-03-27 10:33:27	2024-03-27 10:33:27
 161fe372-52ed-4f29-adba-30855ab47d14	Ivan Hasan	mahasiswa	4122023032	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNzA3ODUyMywiZXhwIjoxNzE3NDM4NTIzLCJuYmYiOjE3MTcwNzg1MjMsImp0aSI6InlWS3VsZEJlbVRCV3NJOWIiLCJzdWIiOiIxNjFmZTM3Mi01MmVkLTRmMjktYWRiYS0zMDg1NWFiNDdkMTQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.NqFISJ5g2WQrsbjk2mmRszBO8K3-6K-hfiqRH7bLZxI	2024-05-30 21:16:23	-	\N	$2y$10$zMkzFZbQj7ARzRAO410PletDz1.hr2u1ZlH4w7IZGAH847NNEjcTK	\N	2024-03-20 14:57:13	2024-03-20 14:57:13
+91d5595c-982d-4b20-99e8-4b4fc96b56f1	drg. Chaira Musytaka Sukma, Sp.KG	dosen	DY172	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxNzQ3Mzc2OCwiZXhwIjoxNzE3ODMzNzY4LCJuYmYiOjE3MTc0NzM3NjgsImp0aSI6Imt6UlhFWnhTTnhnUEpCZEciLCJzdWIiOiI5MWQ1NTk1Yy05ODJkLTRiMjAtOTllOC00YjRmYzk2YjU2ZjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.RM_jqmw0FHzlxvBuwJKYJJbncjBKYZT9u5uKPe5D93U	2024-06-04 11:03:48	-	\N	$2y$10$LxF/.GxgV8q6xeWn64nh7.GDEOrJFmA1EE.OZydu3iRHS0R4N9JGC	\N	2024-03-20 15:18:05	2024-03-20 15:18:05
+57959057-06f2-44b2-82d6-1163502839a5	Mutia Permata Putri	mahasiswa	4122023039	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxODE4MDM3MiwiZXhwIjoxNzE4NTQwMzcyLCJuYmYiOjE3MTgxODAzNzIsImp0aSI6IjdkVnVBSG9jdFlLVEdMTU8iLCJzdWIiOiI1Nzk1OTA1Ny0wNmYyLTQ0YjItODJkNi0xMTYzNTAyODM5YTUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.DuS6UMk8Blc029qhuV4MjYBXNZnmMTGC6KxdOP6hTM4	2024-06-12 15:20:32	-	\N	$2y$10$UMelWTYKxpcC.IY8Uj7i1O28uxTFmS9h9r1hCHZleXOspM7sA92ci	\N	2024-03-20 14:50:36	2024-03-20 14:50:36
+d2e5c81f-42ab-445a-8cd8-f8be8063a9c4	Qanita Regina Maharani	mahasiswa	4122023041	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxODg1MTI4OSwiZXhwIjoxNzE5MjExMjg5LCJuYmYiOjE3MTg4NTEyODksImp0aSI6IkxwaVJqc2JuWkF3Vzh0MzAiLCJzdWIiOiJkMmU1YzgxZi00MmFiLTQ0NWEtOGNkOC1mOGJlODA2M2E5YzQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.nZeNKSYYaxyshDL5HovT33iCB6UUhHAuuDLYjR7U-lw	2024-06-20 09:42:29	-	\N	$2y$10$Xi11KFlLIaRydI3V7m.UJeZanQT5DcNGhY1YrrnM3EirgfhJVXnFq	\N	2024-03-20 14:53:04	2024-03-20 14:53:04
+14ac4b79-661e-4825-8415-16d085fe4095	Administrator	admin	admin	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxODc4MjEzOCwiZXhwIjoxNzE5MTQyMTM4LCJuYmYiOjE3MTg3ODIxMzgsImp0aSI6InRyUlVTTUlUUmRwTjJQVGUiLCJzdWIiOiIxNGFjNGI3OS02NjFlLTQ4MjUtODQxNS0xNmQwODVmZTQwOTUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.EL2AeFj6Uy4BEGVJF6zwHxo3HnYhWzyH4uKSvhHxfb0	2024-06-19 14:29:58	admin@email.com	\N	$2y$10$QyVO7BkaYssdBQ96Oz/5sui4ZSgZpBrQaF3Xa8L0GWqlgfOL6CEt.	\N	2024-02-10 05:26:01	2024-02-21 19:46:03
+c051b700-37b8-47bd-9a96-0f1aaa973ff2	drg. Ufo Pramigi	dosen	DY169	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaXNpa21ma2cucnN5YXJzaS5jby5pZDo0NDMzL2FwaS9sb2dpbiIsImlhdCI6MTcxODMzMjczOCwiZXhwIjoxNzE4NjkyNzM4LCJuYmYiOjE3MTgzMzI3MzgsImp0aSI6InhERzhDcjRyNndBcEVROVoiLCJzdWIiOiJjMDUxYjcwMC0zN2I4LTQ3YmQtOWE5Ni0wZjFhYWE5NzNmZjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.R3IfQfhrik0vuTzlCp73VbE5jCkpXMdq8dytukXR7mU	2024-06-14 09:39:58	-	\N	$2y$10$rEr6UuoNACwslvkXiuCetuupBsgccLC6iOm.E.C1wpcmM1YB7essu	\N	2024-03-20 15:11:24	2024-03-20 15:11:24
 \.
 
 
 --
--- TOC entry 3749 (class 0 OID 16687)
--- Dependencies: 270
+-- TOC entry 3751 (class 0 OID 16687)
+-- Dependencies: 272
 -- Data for Name: years; Type: TABLE DATA; Schema: public; Owner: rsyarsi
 --
 
@@ -8448,8 +8479,8 @@ f70f6fbf-176f-4e19-9396-fec8c50dd62c	2023	1	\N	\N
 
 
 --
--- TOC entry 3772 (class 0 OID 0)
--- Dependencies: 231
+-- TOC entry 3774 (class 0 OID 0)
+-- Dependencies: 233
 -- Name: failed_jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: rsyarsi
 --
 
@@ -8457,8 +8488,8 @@ SELECT pg_catalog.setval('public.failed_jobs_id_seq', 1, false);
 
 
 --
--- TOC entry 3773 (class 0 OID 0)
--- Dependencies: 240
+-- TOC entry 3775 (class 0 OID 0)
+-- Dependencies: 242
 -- Name: migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: rsyarsi
 --
 
@@ -8466,8 +8497,8 @@ SELECT pg_catalog.setval('public.migrations_id_seq', 20, true);
 
 
 --
--- TOC entry 3774 (class 0 OID 0)
--- Dependencies: 244
+-- TOC entry 3776 (class 0 OID 0)
+-- Dependencies: 246
 -- Name: personal_access_tokens_id_seq; Type: SEQUENCE SET; Schema: public; Owner: rsyarsi
 --
 
@@ -8475,7 +8506,7 @@ SELECT pg_catalog.setval('public.personal_access_tokens_id_seq', 1, false);
 
 
 --
--- TOC entry 3468 (class 2606 OID 16701)
+-- TOC entry 3470 (class 2606 OID 16701)
 -- Name: absencestudents absencestudents_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8484,7 +8515,7 @@ ALTER TABLE ONLY public.absencestudents
 
 
 --
--- TOC entry 3470 (class 2606 OID 16703)
+-- TOC entry 3472 (class 2606 OID 16703)
 -- Name: assesmentdetails assesmentdetails_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8493,7 +8524,7 @@ ALTER TABLE ONLY public.assesmentdetails
 
 
 --
--- TOC entry 3474 (class 2606 OID 16705)
+-- TOC entry 3476 (class 2606 OID 16705)
 -- Name: assesmentgroups assesmentgroups_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8502,7 +8533,7 @@ ALTER TABLE ONLY public.assesmentgroups
 
 
 --
--- TOC entry 3472 (class 2606 OID 16707)
+-- TOC entry 3474 (class 2606 OID 16707)
 -- Name: assesmentgroupfinals assesmentgroupsubs_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8511,7 +8542,7 @@ ALTER TABLE ONLY public.assesmentgroupfinals
 
 
 --
--- TOC entry 3476 (class 2606 OID 16709)
+-- TOC entry 3478 (class 2606 OID 16709)
 -- Name: emrkonservasi_jobs emrkonservasi_jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8520,7 +8551,7 @@ ALTER TABLE ONLY public.emrkonservasi_jobs
 
 
 --
--- TOC entry 3478 (class 2606 OID 16711)
+-- TOC entry 3480 (class 2606 OID 16711)
 -- Name: emrkonservasis emrkonservasis_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8529,7 +8560,7 @@ ALTER TABLE ONLY public.emrkonservasis
 
 
 --
--- TOC entry 3480 (class 2606 OID 16713)
+-- TOC entry 3482 (class 2606 OID 16713)
 -- Name: emrortodonsies emrortodonsies_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8538,7 +8569,7 @@ ALTER TABLE ONLY public.emrortodonsies
 
 
 --
--- TOC entry 3482 (class 2606 OID 16715)
+-- TOC entry 3484 (class 2606 OID 16715)
 -- Name: emrpedodontie_behaviorratings emrpedodontie_behaviorratings_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8547,7 +8578,7 @@ ALTER TABLE ONLY public.emrpedodontie_behaviorratings
 
 
 --
--- TOC entry 3490 (class 2606 OID 16717)
+-- TOC entry 3492 (class 2606 OID 16717)
 -- Name: emrperiodontie_soaps emrpedodontie_soaps_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8556,7 +8587,7 @@ ALTER TABLE ONLY public.emrperiodontie_soaps
 
 
 --
--- TOC entry 3484 (class 2606 OID 16719)
+-- TOC entry 3486 (class 2606 OID 16719)
 -- Name: emrpedodontie_treatmenplans emrpedodontie_treatmens_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8565,7 +8596,7 @@ ALTER TABLE ONLY public.emrpedodontie_treatmenplans
 
 
 --
--- TOC entry 3486 (class 2606 OID 16721)
+-- TOC entry 3488 (class 2606 OID 16721)
 -- Name: emrpedodontie_treatmens emrpedodontie_treatmens_pkey1; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8574,7 +8605,7 @@ ALTER TABLE ONLY public.emrpedodontie_treatmens
 
 
 --
--- TOC entry 3488 (class 2606 OID 16723)
+-- TOC entry 3490 (class 2606 OID 16723)
 -- Name: emrpedodonties emrpedodonties_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8583,7 +8614,7 @@ ALTER TABLE ONLY public.emrpedodonties
 
 
 --
--- TOC entry 3492 (class 2606 OID 16725)
+-- TOC entry 3494 (class 2606 OID 16725)
 -- Name: emrperiodonties emrperiodonties_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8592,7 +8623,7 @@ ALTER TABLE ONLY public.emrperiodonties
 
 
 --
--- TOC entry 3494 (class 2606 OID 16727)
+-- TOC entry 3496 (class 2606 OID 16727)
 -- Name: emrprostodontie_logbooks emrprostodontie_logbooks_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8601,7 +8632,7 @@ ALTER TABLE ONLY public.emrprostodontie_logbooks
 
 
 --
--- TOC entry 3496 (class 2606 OID 16729)
+-- TOC entry 3498 (class 2606 OID 16729)
 -- Name: emrprostodonties emrprostodonties_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8610,7 +8641,7 @@ ALTER TABLE ONLY public.emrprostodonties
 
 
 --
--- TOC entry 3498 (class 2606 OID 16731)
+-- TOC entry 3500 (class 2606 OID 16731)
 -- Name: emrradiologies emrradiologies_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8619,7 +8650,7 @@ ALTER TABLE ONLY public.emrradiologies
 
 
 --
--- TOC entry 3500 (class 2606 OID 16733)
+-- TOC entry 3502 (class 2606 OID 16733)
 -- Name: failed_jobs failed_jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8628,7 +8659,7 @@ ALTER TABLE ONLY public.failed_jobs
 
 
 --
--- TOC entry 3502 (class 2606 OID 16735)
+-- TOC entry 3504 (class 2606 OID 16735)
 -- Name: failed_jobs failed_jobs_uuid_unique; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8637,7 +8668,7 @@ ALTER TABLE ONLY public.failed_jobs
 
 
 --
--- TOC entry 3504 (class 2606 OID 16737)
+-- TOC entry 3506 (class 2606 OID 16737)
 -- Name: finalassesment_konservasis finalassesment_konservasis_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8646,7 +8677,7 @@ ALTER TABLE ONLY public.finalassesment_konservasis
 
 
 --
--- TOC entry 3506 (class 2606 OID 16739)
+-- TOC entry 3508 (class 2606 OID 16739)
 -- Name: finalassesment_orthodonties finalassesment_orthodonties_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8655,7 +8686,7 @@ ALTER TABLE ONLY public.finalassesment_orthodonties
 
 
 --
--- TOC entry 3508 (class 2606 OID 16741)
+-- TOC entry 3510 (class 2606 OID 16741)
 -- Name: finalassesment_periodonties finalassesment_periodonties_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8664,7 +8695,7 @@ ALTER TABLE ONLY public.finalassesment_periodonties
 
 
 --
--- TOC entry 3510 (class 2606 OID 16743)
+-- TOC entry 3512 (class 2606 OID 16743)
 -- Name: finalassesment_prostodonties finalassesment_prostodonties_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8673,7 +8704,7 @@ ALTER TABLE ONLY public.finalassesment_prostodonties
 
 
 --
--- TOC entry 3512 (class 2606 OID 16745)
+-- TOC entry 3514 (class 2606 OID 16745)
 -- Name: finalassesment_radiologies finalassesment_radiologies_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8682,7 +8713,7 @@ ALTER TABLE ONLY public.finalassesment_radiologies
 
 
 --
--- TOC entry 3514 (class 2606 OID 16747)
+-- TOC entry 3516 (class 2606 OID 16747)
 -- Name: hospitals hospitals_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8691,7 +8722,7 @@ ALTER TABLE ONLY public.hospitals
 
 
 --
--- TOC entry 3516 (class 2606 OID 16749)
+-- TOC entry 3518 (class 2606 OID 16749)
 -- Name: lectures lectures_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8700,7 +8731,7 @@ ALTER TABLE ONLY public.lectures
 
 
 --
--- TOC entry 3518 (class 2606 OID 16751)
+-- TOC entry 3520 (class 2606 OID 16751)
 -- Name: migrations migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8709,7 +8740,7 @@ ALTER TABLE ONLY public.migrations
 
 
 --
--- TOC entry 3521 (class 2606 OID 16753)
+-- TOC entry 3523 (class 2606 OID 16753)
 -- Name: patients patients_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8718,7 +8749,7 @@ ALTER TABLE ONLY public.patients
 
 
 --
--- TOC entry 3523 (class 2606 OID 16755)
+-- TOC entry 3525 (class 2606 OID 16755)
 -- Name: personal_access_tokens personal_access_tokens_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8727,7 +8758,7 @@ ALTER TABLE ONLY public.personal_access_tokens
 
 
 --
--- TOC entry 3525 (class 2606 OID 16757)
+-- TOC entry 3527 (class 2606 OID 16757)
 -- Name: personal_access_tokens personal_access_tokens_token_unique; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8736,7 +8767,7 @@ ALTER TABLE ONLY public.personal_access_tokens
 
 
 --
--- TOC entry 3528 (class 2606 OID 16759)
+-- TOC entry 3530 (class 2606 OID 16759)
 -- Name: semesters semesters_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8745,7 +8776,7 @@ ALTER TABLE ONLY public.semesters
 
 
 --
--- TOC entry 3530 (class 2606 OID 16761)
+-- TOC entry 3532 (class 2606 OID 16761)
 -- Name: specialistgroups specialistgroups_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8754,7 +8785,7 @@ ALTER TABLE ONLY public.specialistgroups
 
 
 --
--- TOC entry 3532 (class 2606 OID 16763)
+-- TOC entry 3534 (class 2606 OID 16763)
 -- Name: specialists specialists_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8763,7 +8794,7 @@ ALTER TABLE ONLY public.specialists
 
 
 --
--- TOC entry 3534 (class 2606 OID 16765)
+-- TOC entry 3536 (class 2606 OID 16765)
 -- Name: students students_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8772,7 +8803,7 @@ ALTER TABLE ONLY public.students
 
 
 --
--- TOC entry 3536 (class 2606 OID 16767)
+-- TOC entry 3538 (class 2606 OID 16767)
 -- Name: trsassesments trsassesments_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8781,7 +8812,7 @@ ALTER TABLE ONLY public.trsassesments
 
 
 --
--- TOC entry 3540 (class 2606 OID 16769)
+-- TOC entry 3542 (class 2606 OID 16769)
 -- Name: type_five_trsdetailassesments type_five_trsdetailassesments_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8790,7 +8821,7 @@ ALTER TABLE ONLY public.type_five_trsdetailassesments
 
 
 --
--- TOC entry 3542 (class 2606 OID 16771)
+-- TOC entry 3544 (class 2606 OID 16771)
 -- Name: type_four_trsdetailassesments type_four_trsdetailassesments_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8799,7 +8830,7 @@ ALTER TABLE ONLY public.type_four_trsdetailassesments
 
 
 --
--- TOC entry 3538 (class 2606 OID 16773)
+-- TOC entry 3540 (class 2606 OID 16773)
 -- Name: type_one_control_trsdetailassesments type_one_control_trsdetailassesments_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8808,7 +8839,7 @@ ALTER TABLE ONLY public.type_one_control_trsdetailassesments
 
 
 --
--- TOC entry 3544 (class 2606 OID 16775)
+-- TOC entry 3546 (class 2606 OID 16775)
 -- Name: type_one_trsdetailassesments type_one_trsdetailassesments_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8817,7 +8848,7 @@ ALTER TABLE ONLY public.type_one_trsdetailassesments
 
 
 --
--- TOC entry 3546 (class 2606 OID 16777)
+-- TOC entry 3548 (class 2606 OID 16777)
 -- Name: type_three_trsdetailassesments type_three_trsdetailassesments_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8826,7 +8857,7 @@ ALTER TABLE ONLY public.type_three_trsdetailassesments
 
 
 --
--- TOC entry 3548 (class 2606 OID 16779)
+-- TOC entry 3550 (class 2606 OID 16779)
 -- Name: universities universities_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8835,7 +8866,7 @@ ALTER TABLE ONLY public.universities
 
 
 --
--- TOC entry 3550 (class 2606 OID 16781)
+-- TOC entry 3552 (class 2606 OID 16781)
 -- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8844,7 +8875,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- TOC entry 3552 (class 2606 OID 16783)
+-- TOC entry 3554 (class 2606 OID 16783)
 -- Name: years years_pkey; Type: CONSTRAINT; Schema: public; Owner: rsyarsi
 --
 
@@ -8853,7 +8884,7 @@ ALTER TABLE ONLY public.years
 
 
 --
--- TOC entry 3519 (class 1259 OID 16784)
+-- TOC entry 3521 (class 1259 OID 16784)
 -- Name: password_resets_email_index; Type: INDEX; Schema: public; Owner: rsyarsi
 --
 
@@ -8861,14 +8892,14 @@ CREATE INDEX password_resets_email_index ON public.password_resets USING btree (
 
 
 --
--- TOC entry 3526 (class 1259 OID 16785)
+-- TOC entry 3528 (class 1259 OID 16785)
 -- Name: personal_access_tokens_tokenable_type_tokenable_id_index; Type: INDEX; Schema: public; Owner: rsyarsi
 --
 
 CREATE INDEX personal_access_tokens_tokenable_type_tokenable_id_index ON public.personal_access_tokens USING btree (tokenable_type, tokenable_id);
 
 
--- Completed on 2024-06-02 15:28:24 WIB
+-- Completed on 2024-06-21 13:06:00 WIB
 
 --
 -- PostgreSQL database dump complete
